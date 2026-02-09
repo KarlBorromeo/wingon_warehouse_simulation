@@ -3,11 +3,12 @@ PROTO ForkLiftCustom [
   field SFVec3f    translation   0.594608 -0.0072609 0.329022
   field SFRotation rotation      0.6727404051106388 -0.7398685233752105 -0.0038620525837176896 0.01781989510417655
   field SFString   robot_name    "forklift_1"
+  field SFString   controller    "forklift_controller"
   field SFColor body_color       0.752941 0.109804 0.156863
   field SFBool      supervised    TRUE
 ]
 {
-    Robot {
+    DEF FORKLIFT Robot {
     translation IS translation
     rotation IS rotation
     name IS robot_name
@@ -368,7 +369,7 @@ PROTO ForkLiftCustom [
         density 1
         mass 1
     }
-    controller "forklift_controller"
+    controller IS controller
     supervisor IS supervised
     }
 }

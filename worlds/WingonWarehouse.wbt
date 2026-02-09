@@ -12,204 +12,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.23960742361274004 0.15569639904588298 -0.9583041865054175 2.1208415811876553
-  position 26.912095349947066 33.18890764668781 24.640225296548255
+  orientation -0.07426633642360767 -0.9752012435805032 0.20848751951437175 5.347324584623412
+  position -14.093057502903989 10.07307847181049 35.05112594015306
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
   texture "noon_park_empty"
   luminosity 0.5
-}
-Solid {
-  translation 10.68 11.89 0.9
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
-          url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
-          ]
-        }
-      }
-      geometry Box {
-        size 23.15 16.198 2.6
-      }
-    }
-  ]
-  name "solid(41)"
-  boundingObject Shape {
-    appearance Appearance {
-      material Material {
-      }
-      texture ImageTexture {
-        url [
-          "../textures/Texturelabs_Concrete_192XL.jpg"
-        ]
-      }
-    }
-    geometry Box {
-      size 23.15 16.198 2.6
-    }
-  }
-}
-Solid {
-  translation 10.68 -12.59 0.9
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
-          url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
-          ]
-        }
-      }
-      geometry Box {
-        size 23.15 16.198 2.6
-      }
-    }
-  ]
-  name "solid(40)"
-  boundingObject Shape {
-    appearance Appearance {
-      material Material {
-      }
-      texture ImageTexture {
-        url [
-          "../textures/Texturelabs_Concrete_192XL.jpg"
-        ]
-      }
-    }
-    geometry Box {
-      size 23.15 16.198 2.6
-    }
-  }
-}
-Solid {
-  translation 24.96 -12.59 0.9
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
-          url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
-          ]
-        }
-      }
-      geometry Box {
-        size 23.15 16.198 2.6
-      }
-    }
-  ]
-  name "solid(42)"
-  boundingObject Shape {
-    appearance Appearance {
-      material Material {
-      }
-      texture ImageTexture {
-        url [
-          "../textures/Texturelabs_Concrete_192XL.jpg"
-        ]
-      }
-    }
-    geometry Box {
-      size 23.15 16.198 2.6
-    }
-  }
-}
-Solid {
-  translation 24.96 -0.19 0.9
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
-          url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
-          ]
-        }
-      }
-      geometry Box {
-        size 23.15 16.198 2.6
-      }
-    }
-  ]
-  name "solid(35)"
-  boundingObject Shape {
-    appearance Appearance {
-      material Material {
-      }
-      texture ImageTexture {
-        url [
-          "../textures/Texturelabs_Concrete_192XL.jpg"
-        ]
-      }
-    }
-    geometry Box {
-      size 23.15 16.198 2.6
-    }
-  }
-}
-Solid {
-  translation 24.95 12.01 0.9
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
-          url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
-          ]
-        }
-      }
-      geometry Box {
-        size 23.15 16.198 2.6
-      }
-    }
-  ]
-  name "solid(43)"
-  boundingObject Shape {
-    appearance Appearance {
-      material Material {
-      }
-      texture ImageTexture {
-        url [
-          "../textures/Texturelabs_Concrete_192XL.jpg"
-        ]
-      }
-    }
-    geometry Box {
-      size 23.15 16.198 2.6
-    }
-  }
-}
-Solid {
-  translation 10.65 -0.18 0.9
-  children [
-    Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
-          url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
-          ]
-        }
-      }
-      geometry Box {
-        size 23.15 16.198 2.6
-      }
-    }
-  ]
-  name "solid(44)"
 }
 Solid {
   translation -13.57 -0.18 0.37
@@ -232,7 +42,7 @@ Solid {
   name "solid(1)"
 }
 Solid {
-  translation 5.52 -0.18 1.56
+  translation 18.62 -0.18 1.56
   children [
     Shape {
       appearance Appearance {
@@ -245,7 +55,7 @@ Solid {
         }
       }
       geometry Box {
-        size 23.15 16.198 1.3
+        size 50 40 1.3
       }
     }
   ]
@@ -261,7 +71,7 @@ Solid {
       }
     }
     geometry Box {
-      size 23.15 16.198 1.3
+      size 50 16.198 1.3
     }
   }
 }
@@ -1376,25 +1186,28 @@ TruckSimple {
   ]
 }
 ForkLiftCustom {
-  hidden rotation_2 -0.8043959425634231 0.06151830072440329 -0.5908998783749104 1.4797445798735338e-05
-  hidden rotation_4 0.312884131738127 0.014459060093082262 0.949681238989011 0.00014512011303987853
+  hidden rotation_2 -0.9317798571680584 0.07125409309203071 0.3559622901284697 1.2774528318718372e-05
+  hidden rotation_3 -7.728689675114035e-05 0.99999999562061 5.277798549425141e-05 6.147705925411944
   translation 2.8476225078721673 -3.744698989974196 2.533108836464862
-  rotation -0.011985370823459353 -0.999922480793587 0.0033739131321286137 0.019941529070692045
+  rotation -0.00996983291971227 0.00011950103499643784 0.999950292840127 -3.1415253071795863
+  controller "auto_controller"
   body_color 0.960784 0.760784 0.0666667
 }
 ForkLiftCustom {
-  hidden rotation_2 -0.804396630535687 0.06151835333889619 -0.5908989363548595 1.4797475809911967e-05
-  hidden rotation_4 0.3128841319419504 0.01445906010250138 0.9496812389217155 0.00014512010997972923
+  hidden rotation_2 -0.9317798571680584 0.07125409309203071 0.3559622901284697 1.2774528318718372e-05
+  hidden rotation_3 -7.728689675114035e-05 0.99999999562061 5.277798549425141e-05 6.147705925411944
   translation 3.066482332076 1.3076280995872651 2.53310883633179
-  rotation -0.011549951321498449 -0.9988842884269079 0.04579057717850602 0.01996235773298118
+  rotation -0.009969882919697127 0.00011528003375995344 0.9999502928371395 -3.140675307179586
   robot_name "forklift_2"
+  controller "auto_controller"
 }
 ForkLiftCustom {
-  hidden rotation_2 -0.8043957804593148 0.061518288327064165 -0.5909001003389303 1.4797445798735338e-05
-  hidden rotation_4 0.3128841320362773 0.014459060106860435 0.949681238890572 0.00014512010691957985
+  hidden rotation_2 -0.9317798571680584 0.07125409309203071 0.3559622901284697 1.2774528318718372e-05
+  hidden rotation_3 -7.728689675114035e-05 0.99999999562061 5.277798549425141e-05 6.147705925411944
   translation 2.95949523710613 5.840309486829114 2.5331088363092804
-  rotation -0.011567790605002917 -0.9989603308094152 0.04409584662598889 0.01996083012152315
+  rotation -0.009969872920493804 0.00011544903381870467 0.9999502929173378 -3.1407153071795864
   robot_name "forklift_3"
+  controller "auto_controller"
   body_color 0.6 0.756863 0.945098
 }
 RackCustom {
