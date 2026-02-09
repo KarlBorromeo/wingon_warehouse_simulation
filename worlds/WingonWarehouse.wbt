@@ -12,14 +12,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07426633642360767 -0.9752012435805032 0.20848751951437175 5.347324584623412
-  position -14.093057502903989 10.07307847181049 35.05112594015306
+  orientation 0.20934357541016552 0.5359224634108345 -0.8179012046978237 0.9904973572338331
+  position -6.863650097427207 20.16270312958554 18.840780850606098
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
-  texture "noon_park_empty"
-  luminosity 0.5
+  luminosity 0.7
 }
 Solid {
   translation -13.57 -0.18 0.37
@@ -45,12 +44,21 @@ Solid {
   translation 18.62 -0.18 1.56
   children [
     Shape {
-      appearance Appearance {
-        material Material {
-        }
-        texture ImageTexture {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
           url [
-            "../textures/Texturelabs_Concrete_192XL.jpg"
+            "../textures/rectangle-polished-tile_albedo.png"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "../textures/rectangle-polished-tile_roughness.png"
+          ]
+        }
+        metalness 0
+        normalMap ImageTexture {
+          url [
+            "../textures/rectangle-polished-tile_normal-ogl.png"
           ]
         }
       }
@@ -59,7 +67,7 @@ Solid {
       }
     }
   ]
-  name "solid(33)"
+  name "floor"
   boundingObject Shape {
     appearance Appearance {
       material Material {
@@ -1185,30 +1193,30 @@ TruckSimple {
     ""
   ]
 }
-ForkLiftCustom {
-  hidden rotation_2 -0.9317798571680584 0.07125409309203071 0.3559622901284697 1.2774528318718372e-05
-  hidden rotation_3 -7.728689675114035e-05 0.99999999562061 5.277798549425141e-05 6.147705925411944
+DEF FORKLIFT ForkLiftCustom {
+  hidden rotation_2 -0.9317798570801245 0.07125409308530631 0.3559622903599951 1.2774528318718372e-05
+  hidden rotation_3 -7.728668292980752e-05 0.9999999956206342 5.2777839479083544e-05 6.147705925411944
   translation 2.8476225078721673 -3.744698989974196 2.533108836464862
   rotation -0.00996983291971227 0.00011950103499643784 0.999950292840127 -3.1415253071795863
   controller "auto_controller"
   body_color 0.960784 0.760784 0.0666667
 }
-ForkLiftCustom {
-  hidden rotation_2 -0.9317798571680584 0.07125409309203071 0.3559622901284697 1.2774528318718372e-05
-  hidden rotation_3 -7.728689675114035e-05 0.99999999562061 5.277798549425141e-05 6.147705925411944
+DEF FORKLIFT ForkLiftCustom {
+  hidden rotation_2 -0.9317798570801245 0.07125409308530631 0.3559622903599951 1.2774528318718372e-05
+  hidden rotation_3 -7.728668292980752e-05 0.9999999956206342 5.2777839479083544e-05 6.147705925411944
   translation 3.066482332076 1.3076280995872651 2.53310883633179
   rotation -0.009969882919697127 0.00011528003375995344 0.9999502928371395 -3.140675307179586
   robot_name "forklift_2"
   controller "auto_controller"
 }
-ForkLiftCustom {
-  hidden rotation_2 -0.9317798571680584 0.07125409309203071 0.3559622901284697 1.2774528318718372e-05
-  hidden rotation_3 -7.728689675114035e-05 0.99999999562061 5.277798549425141e-05 6.147705925411944
+DEF FORKLIFT ForkLiftCustom {
+  hidden rotation_2 -0.9317798570801245 0.07125409308530631 0.3559622903599951 1.2774528318718372e-05
+  hidden rotation_3 -7.728668292980752e-05 0.9999999956206342 5.2777839479083544e-05 6.147705925411944
   translation 2.95949523710613 5.840309486829114 2.5331088363092804
   rotation -0.009969872920493804 0.00011544903381870467 0.9999502929173378 -3.1407153071795864
   robot_name "forklift_3"
   controller "auto_controller"
-  body_color 0.6 0.756863 0.945098
+  body_color 0.109804 0.443137 0.847059
 }
 RackCustom {
   translation 10.04 -0.42999 2.25998
