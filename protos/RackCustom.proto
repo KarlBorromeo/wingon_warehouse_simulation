@@ -1,0 +1,42 @@
+#VRML_SIM R2025a utf8
+PROTO RackCustom [
+  field SFVec3f    translation   7.59 6.44113e-06 2.25998
+  field SFRotation rotation      -3.3977899999752476e-06 1.73923999998733e-06 -0.9999999999927152 -1.5707953071795862
+  field SFBool      supervised    TRUE
+]
+{
+    Solid {
+        translation IS translation
+        rotation IS rotation
+        children [
+            Pose {
+            rotation 0.5773509358554485 0.5773489358556708 0.5773509358554485 2.0944
+            children [
+                Shape {
+                appearance ThreadMetalPlate {
+                }
+                geometry Mesh {
+                    url [
+                    "../meshes/WareHouse Rack v1.2.stl"
+                    ]
+                }
+                }
+            ]
+            }
+        ]
+        boundingObject Pose {
+            rotation 0.5773509358554485 0.5773489358556708 0.5773509358554485 2.0944
+            children [
+            Shape {
+                appearance ThreadMetalPlate {
+                }
+                geometry Mesh {
+                url [
+                    "../meshes/WareHouse Rack v1.2.stl"
+                ]
+                }
+            }
+            ]
+        }
+        }
+}

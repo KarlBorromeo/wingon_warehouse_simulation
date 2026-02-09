@@ -1,0 +1,1476 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/humans/pedestrian/protos/Pedestrian.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/CardboardBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/generic/TruckSimple.proto"
+EXTERNPROTO "../protos/ForkLiftCustom.proto"
+EXTERNPROTO "../protos/RackCustom.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/pallet/protos/WoodenPallet.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.23960742361274004 0.15569639904588298 -0.9583041865054175 2.1208415811876553
+  position 26.912095349947066 33.18890764668781 24.640225296548255
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+  texture "noon_park_empty"
+  luminosity 0.5
+}
+Solid {
+  translation 10.68 11.89 0.9
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 2.6
+      }
+    }
+  ]
+  name "solid(41)"
+  boundingObject Shape {
+    appearance Appearance {
+      material Material {
+      }
+      texture ImageTexture {
+        url [
+          "../textures/Texturelabs_Concrete_192XL.jpg"
+        ]
+      }
+    }
+    geometry Box {
+      size 23.15 16.198 2.6
+    }
+  }
+}
+Solid {
+  translation 10.68 -12.59 0.9
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 2.6
+      }
+    }
+  ]
+  name "solid(40)"
+  boundingObject Shape {
+    appearance Appearance {
+      material Material {
+      }
+      texture ImageTexture {
+        url [
+          "../textures/Texturelabs_Concrete_192XL.jpg"
+        ]
+      }
+    }
+    geometry Box {
+      size 23.15 16.198 2.6
+    }
+  }
+}
+Solid {
+  translation 24.96 -12.59 0.9
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 2.6
+      }
+    }
+  ]
+  name "solid(42)"
+  boundingObject Shape {
+    appearance Appearance {
+      material Material {
+      }
+      texture ImageTexture {
+        url [
+          "../textures/Texturelabs_Concrete_192XL.jpg"
+        ]
+      }
+    }
+    geometry Box {
+      size 23.15 16.198 2.6
+    }
+  }
+}
+Solid {
+  translation 24.96 -0.19 0.9
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 2.6
+      }
+    }
+  ]
+  name "solid(35)"
+  boundingObject Shape {
+    appearance Appearance {
+      material Material {
+      }
+      texture ImageTexture {
+        url [
+          "../textures/Texturelabs_Concrete_192XL.jpg"
+        ]
+      }
+    }
+    geometry Box {
+      size 23.15 16.198 2.6
+    }
+  }
+}
+Solid {
+  translation 24.95 12.01 0.9
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 2.6
+      }
+    }
+  ]
+  name "solid(43)"
+  boundingObject Shape {
+    appearance Appearance {
+      material Material {
+      }
+      texture ImageTexture {
+        url [
+          "../textures/Texturelabs_Concrete_192XL.jpg"
+        ]
+      }
+    }
+    geometry Box {
+      size 23.15 16.198 2.6
+    }
+  }
+}
+Solid {
+  translation 10.65 -0.18 0.9
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 2.6
+      }
+    }
+  ]
+  name "solid(44)"
+}
+Solid {
+  translation -13.57 -0.18 0.37
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 1.3
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Solid {
+  translation 5.52 -0.18 1.56
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 23.15 16.198 1.3
+      }
+    }
+  ]
+  name "solid(33)"
+  boundingObject Shape {
+    appearance Appearance {
+      material Material {
+      }
+      texture ImageTexture {
+        url [
+          "../textures/Texturelabs_Concrete_192XL.jpg"
+        ]
+      }
+    }
+    geometry Box {
+      size 23.15 16.198 1.3
+    }
+  }
+}
+Solid {
+  translation -1.08 6.34 3.44
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 3.5 6.954
+      }
+    }
+  ]
+  name "solid(2)"
+}
+Solid {
+  translation -14.71 -8.3 3.66
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 27 8
+      }
+    }
+  ]
+  name "solid(29)"
+}
+Solid {
+  translation 17.82 -20.97 3.66
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 38 8
+      }
+    }
+  ]
+  name "solid(36)"
+}
+Solid {
+  translation 17.82 20.42 3.66
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 38 8
+      }
+    }
+  ]
+  name "solid(34)"
+}
+Solid {
+  translation -1.1 14.161 3.66
+  rotation 0 0 1 -3.1415853071795863
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 13 8
+      }
+    }
+  ]
+  name "solid(37)"
+}
+Solid {
+  translation -1.09987 -14.399 3.66
+  rotation 0 0 1 -3.1415853071795863
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 13 8
+      }
+    }
+  ]
+  name "solid(45)"
+}
+Solid {
+  translation 36.68 -0.32 3.66
+  rotation 3.52253e-14 -9.58979e-09 1 -3.1415853071795863
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 41 8
+      }
+    }
+  ]
+  name "solid(39)"
+}
+Solid {
+  translation -14.82 8.35999 3.66
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 27 8
+      }
+    }
+  ]
+  name "solid(38)"
+}
+Solid {
+  translation -8.6944 7.34 1.05724
+  rotation 0 -1 0 -1.3587253071795864
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 1.2 1.5 5.6
+      }
+    }
+  ]
+  name "solid(28)"
+  rotationStep 0.00261799
+}
+Solid {
+  translation -1.31 7.5 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(13)"
+}
+Solid {
+  translation -1.31 6.28 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(14)"
+}
+Solid {
+  translation -1.31 5.13 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(15)"
+}
+Solid {
+  translation -1.31 3.92 6.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 2
+      }
+    }
+  ]
+  name "solid(22)"
+}
+Solid {
+  translation -1.31 2.72 6.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 2
+      }
+    }
+  ]
+  name "solid(23)"
+}
+Solid {
+  translation -1.31 2.1 6.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 2
+      }
+    }
+  ]
+  name "solid(27)"
+}
+Solid {
+  translation -1.31 -2.05 6.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 2
+      }
+    }
+  ]
+  name "solid(24)"
+}
+Solid {
+  translation -1.31 -3.25 6.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 2
+      }
+    }
+  ]
+  name "solid(25)"
+}
+Solid {
+  translation -1.31 -3.96 6.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 2
+      }
+    }
+  ]
+  name "solid(26)"
+}
+Solid {
+  translation -1.31 0.92 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(16)"
+}
+Solid {
+  translation -1.31 -0.03 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(17)"
+}
+Solid {
+  translation -1.31 -0.85 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(18)"
+}
+Solid {
+  translation -1.31 -5.17 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(19)"
+}
+Solid {
+  translation -1.31 -6.39 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(20)"
+}
+Solid {
+  translation -1.31 -7.45 5.79
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.1 1.2 4
+      }
+    }
+  ]
+  name "solid(21)"
+}
+Solid {
+  translation -1.08 0.03 3.57
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 3 6.954
+      }
+    }
+  ]
+  name "solid(4)"
+}
+Solid {
+  translation -1.38 8.02 3.81
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.270588 0.34902 0.403922
+        }
+      }
+      geometry Cylinder {
+        height 8
+        radius 0.07
+      }
+    }
+  ]
+  name "solid(32)"
+}
+Solid {
+  translation -1.38 -0.08 3.81
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.270588 0.34902 0.403922
+        }
+      }
+      geometry Cylinder {
+        height 8
+        radius 0.07
+      }
+    }
+  ]
+  name "solid(30)"
+}
+Solid {
+  translation -1.38 -7.95 3.81
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.270588 0.34902 0.403922
+        }
+      }
+      geometry Cylinder {
+        height 8
+        radius 0.07
+      }
+    }
+  ]
+  name "solid(31)"
+}
+Solid {
+  translation -1.13 4.55 4
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_122S.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 0.1 3.5
+      }
+    }
+  ]
+  name "solid(6)"
+}
+Solid {
+  translation -1.13 1.52 4
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_122S.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 0.1 3.5
+      }
+    }
+  ]
+  name "solid(5)"
+}
+Solid {
+  translation -1.13 -1.5 4
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_122S.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 0.1 3.5
+      }
+    }
+  ]
+  name "solid(7)"
+}
+Solid {
+  translation -1.13 -4.54 4
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_122S.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 0.1 3.5
+      }
+    }
+  ]
+  name "solid(8)"
+}
+Solid {
+  translation -1.44 3.04 6.05
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_252M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 1.2 3.1 0.6
+      }
+    }
+  ]
+  name "solid(9)"
+}
+Solid {
+  translation -1.28 3.06 5.71
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.316 1.1 3
+      }
+    }
+  ]
+  name "solid(11)"
+}
+Solid {
+  translation -1.28 -3.02 5.71
+  rotation 1 0 0 -1.5707953071795862
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_222M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.316 1.1 3
+      }
+    }
+  ]
+  name "solid(12)"
+}
+Solid {
+  translation -1.49 -3.03 6.05
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Metal_252M.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 1.2 3.1 0.6
+      }
+    }
+  ]
+  name "solid(10)"
+}
+Pedestrian {
+  translation -5.58 -4.77 3.48
+  rotation 0 0 1 1.5708
+}
+Solid {
+  translation -1.08 -6.32 3.43
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+        }
+        texture ImageTexture {
+          url [
+            "../textures/Texturelabs_Concrete_192XL.jpg"
+          ]
+        }
+      }
+      geometry Box {
+        size 0.5 3.5 6.954
+      }
+    }
+  ]
+  name "solid(3)"
+}
+CardboardBox {
+  translation -4.094608249901505 -3.1599998433814656 2.939482696524333
+  rotation -0.03257858912752815 0.9991499533799646 -0.02525878443777955 1.9188694350522462e-05
+  size 0.31 0.37 0.24
+  mass 1
+}
+Robot {
+  translation -4.09 -3.17 2.22
+  children [
+    Track {
+      translation -1.5694542511823784e-05 -1.4816969873265862e-09 0.4498750153013127
+      rotation -0.03260658051774776 0.9994353449041018 0.008111859426696346 1.9145620740622976e-05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_base_color.jpg"
+              ]
+            }
+            roughnessMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_roughness.jpg"
+              ]
+            }
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_normal.jpg"
+              ]
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_occlusion.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 12.4 2
+              translation -0.29780645161289465 0
+            }
+          }
+          geometry DEF BELT_BO Box {
+            size 3.1 0.5 0.3
+          }
+        }
+      ]
+      boundingObject USE BELT_BO
+      physics Physics {
+        density -1
+        mass 1
+      }
+      device [
+        LinearMotor {
+          name "belt_motor"
+          maxVelocity 0.3
+          sound ""
+        }
+      ]
+      textureAnimation 0.3225806451612903 0
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_base_color.jpg"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_roughness.jpg"
+          ]
+        }
+        metalnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_metalness.jpg"
+          ]
+        }
+        normalMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_normal.jpg"
+          ]
+        }
+        occlusionMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_occlusion.jpg"
+          ]
+        }
+        textureTransform TextureTransform {
+          scale 2 2
+        }
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            1.58 -0.28 0
+            1.58 -0.28 0.61
+            -1.58 -0.28 0.61
+            -1.58 -0.28 0
+            1.58 0.28 0
+            1.58 0.28 0.61
+            -1.58 0.28 0.61
+            -1.58 0.28 0
+            1.55 -0.25 0.61
+            1.55 0.25 0.61
+            -1.55 0.25 0.61
+            -1.55 -0.25 0.61
+            1.55 -0.25 0.6
+            1.55 0.25 0.6
+            -1.55 0.25 0.6
+            -1.55 -0.25 0.6
+          ]
+        }
+        texCoord TextureCoordinate {
+          point [
+            0 0
+            1 0
+            1 1
+            0 1
+            0 0.38607594936708856
+            1 0.38607594936708856
+            0 0.38607594936708856
+            0.17721518987341772 0.38607594936708856
+            0.17721518987341772 0
+            0 0
+            0.001 0
+            0.001 0.001
+            0 0.001
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, -1, 4, 7, 6, 5, -1, 0, 4, 5, 1, -1, 7, 3, 2, 6, -1, 1, 5, 9, 8, -1, 5, 6, 10, 9, -1, 6, 2, 11, 10, -1, 2, 1, 8, 11, -1, 0, 3, 7, 4, -1, 8, 9, 13, 12, -1, 9, 10, 14, 13, -1, 10, 11, 15, 14, -1, 11, 8, 12, 15, -1
+        ]
+        texCoordIndex [
+          1, 5, 4, 0, -1, 0, 1, 5, 4, -1, 0, 8, 7, 6, -1, 0, 8, 7, 6, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1
+        ]
+      }
+    }
+  ]
+  name "conveyor belt"
+  boundingObject Group {
+    children [
+      Pose {
+        translation 1.565 0 0.305
+        children [
+          Box {
+            size 0.03 0.56 0.61
+          }
+        ]
+      }
+      Pose {
+        translation -1.565 0 0.305
+        children [
+          Box {
+            size 0.03 0.56 0.61
+          }
+        ]
+      }
+      Pose {
+        translation 0 -0.265 0.305
+        children [
+          Box {
+            size 3.1 0.03 0.61
+          }
+        ]
+      }
+      Pose {
+        translation 0 0.265 0.305
+        children [
+          Box {
+            size 3.1 0.03 0.61
+          }
+        ]
+      }
+    ]
+  }
+  controllerArgs [
+    "0.3"
+    "0"
+  ]
+  window "<none>"
+}
+Robot {
+  translation -2.78 -1.21 2.27
+  rotation 0 0 1 1.5708
+  children [
+    Track {
+      translation -1.569455452976598e-05 -1.4818994920062778e-09 0.44992185631192294
+      rotation -0.00805711394446907 0.99993533148636 0.008025942944553926 1.935117067524319e-05
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_base_color.jpg"
+              ]
+            }
+            roughnessMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_roughness.jpg"
+              ]
+            }
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_normal.jpg"
+              ]
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_occlusion.jpg"
+              ]
+            }
+            textureTransform TextureTransform {
+              scale 12.4 2
+              translation -0.29780645161289465 0
+            }
+          }
+          geometry DEF BELT_BO Box {
+            size 3.1 0.5 0.3
+          }
+        }
+      ]
+      boundingObject USE BELT_BO
+      physics Physics {
+        density -1
+        mass 1
+      }
+      device [
+        LinearMotor {
+          name "belt_motor"
+          maxVelocity 0.3
+          sound ""
+        }
+      ]
+      textureAnimation 0.3225806451612903 0
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_base_color.jpg"
+          ]
+        }
+        roughnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_roughness.jpg"
+          ]
+        }
+        metalnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_metalness.jpg"
+          ]
+        }
+        normalMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_normal.jpg"
+          ]
+        }
+        occlusionMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_occlusion.jpg"
+          ]
+        }
+        textureTransform TextureTransform {
+          scale 2 2
+        }
+      }
+      geometry IndexedFaceSet {
+        coord Coordinate {
+          point [
+            1.58 -0.28 0
+            1.58 -0.28 0.61
+            -1.58 -0.28 0.61
+            -1.58 -0.28 0
+            1.58 0.28 0
+            1.58 0.28 0.61
+            -1.58 0.28 0.61
+            -1.58 0.28 0
+            1.55 -0.25 0.61
+            1.55 0.25 0.61
+            -1.55 0.25 0.61
+            -1.55 -0.25 0.61
+            1.55 -0.25 0.6
+            1.55 0.25 0.6
+            -1.55 0.25 0.6
+            -1.55 -0.25 0.6
+          ]
+        }
+        texCoord TextureCoordinate {
+          point [
+            0 0
+            1 0
+            1 1
+            0 1
+            0 0.38607594936708856
+            1 0.38607594936708856
+            0 0.38607594936708856
+            0.17721518987341772 0.38607594936708856
+            0.17721518987341772 0
+            0 0
+            0.001 0
+            0.001 0.001
+            0 0.001
+          ]
+        }
+        coordIndex [
+          0, 1, 2, 3, -1, 4, 7, 6, 5, -1, 0, 4, 5, 1, -1, 7, 3, 2, 6, -1, 1, 5, 9, 8, -1, 5, 6, 10, 9, -1, 6, 2, 11, 10, -1, 2, 1, 8, 11, -1, 0, 3, 7, 4, -1, 8, 9, 13, 12, -1, 9, 10, 14, 13, -1, 10, 11, 15, 14, -1, 11, 8, 12, 15, -1
+        ]
+        texCoordIndex [
+          1, 5, 4, 0, -1, 0, 1, 5, 4, -1, 0, 8, 7, 6, -1, 0, 8, 7, 6, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1
+        ]
+      }
+    }
+  ]
+  name "conveyor belt(1)"
+  boundingObject Group {
+    children [
+      Pose {
+        translation 1.565 0 0.305
+        children [
+          Box {
+            size 0.03 0.56 0.61
+          }
+        ]
+      }
+      Pose {
+        translation -1.565 0 0.305
+        children [
+          Box {
+            size 0.03 0.56 0.61
+          }
+        ]
+      }
+      Pose {
+        translation 0 -0.265 0.305
+        children [
+          Box {
+            size 3.1 0.03 0.61
+          }
+        ]
+      }
+      Pose {
+        translation 0 0.265 0.305
+        children [
+          Box {
+            size 3.1 0.03 0.61
+          }
+        ]
+      }
+    ]
+  }
+  controllerArgs [
+    "0.3"
+    "0"
+  ]
+  window "<none>"
+}
+TruckSimple {
+  translation -13.67 -6.26 1.4
+  rotation 0 0 1 3.14159
+  controllerArgs [
+    ""
+  ]
+}
+ForkLiftCustom {
+  hidden rotation_2 -0.8043959425634231 0.06151830072440329 -0.5908998783749104 1.4797445798735338e-05
+  hidden rotation_4 0.312884131738127 0.014459060093082262 0.949681238989011 0.00014512011303987853
+  translation 2.8476225078721673 -3.744698989974196 2.533108836464862
+  rotation -0.011985370823459353 -0.999922480793587 0.0033739131321286137 0.019941529070692045
+  body_color 0.960784 0.760784 0.0666667
+}
+ForkLiftCustom {
+  hidden rotation_2 -0.804396630535687 0.06151835333889619 -0.5908989363548595 1.4797475809911967e-05
+  hidden rotation_4 0.3128841319419504 0.01445906010250138 0.9496812389217155 0.00014512010997972923
+  translation 3.066482332076 1.3076280995872651 2.53310883633179
+  rotation -0.011549951321498449 -0.9988842884269079 0.04579057717850602 0.01996235773298118
+  robot_name "forklift_2"
+}
+ForkLiftCustom {
+  hidden rotation_2 -0.8043957804593148 0.061518288327064165 -0.5909001003389303 1.4797445798735338e-05
+  hidden rotation_4 0.3128841320362773 0.014459060106860435 0.949681238890572 0.00014512010691957985
+  translation 2.95949523710613 5.840309486829114 2.5331088363092804
+  rotation -0.011567790605002917 -0.9989603308094152 0.04409584662598889 0.01996083012152315
+  robot_name "forklift_3"
+  body_color 0.6 0.756863 0.945098
+}
+RackCustom {
+  translation 10.04 -0.42999 2.25998
+}
+RackCustom {
+  translation 13.73 -0.48999 2.25998
+}
+RackCustom {
+  translation 17.46 -0.49999 2.25998
+}
+RackCustom {
+  translation 21.18 -0.57999 2.25998
+}
+RackCustom {
+  translation 24.88 -0.67999 2.25998
+}
+RackCustom {
+  translation 28.66 -0.73999 2.25998
+}
+RackCustom {
+  translation 10.04 0.83001 2.25998
+}
+RackCustom {
+  translation 10.04 9.87001 2.25998
+}
+RackCustom {
+  translation 13.81 9.87001 2.25998
+}
+RackCustom {
+  translation 17.58 9.87001 2.25998
+}
+RackCustom {
+  translation 21.28 9.87001 2.25998
+}
+RackCustom {
+  translation 24.95 9.87001 2.25998
+}
+RackCustom {
+  translation 28.64 9.87001 2.25998
+}
+RackCustom {
+  translation 28.64 -9.97999 2.25998
+}
+RackCustom {
+  translation 24.89 -9.97999 2.25998
+}
+RackCustom {
+  translation 21.15 -9.97999 2.25998
+}
+RackCustom {
+  translation 17.34 -9.97999 2.25998
+}
+RackCustom {
+  translation 13.57 -9.97999 2.25998
+}
+RackCustom {
+  translation 9.91 -9.97999 2.25998
+}
+RackCustom {
+  translation 13.72 0.84001 2.25998
+}
+RackCustom {
+  translation 17.37 0.88001 2.25998
+}
+RackCustom {
+  translation 21.08 0.88001 2.25998
+}
+RackCustom {
+  translation 24.89 0.83001 2.25998
+}
+RackCustom {
+  translation 28.61 0.85001 2.25998
+}
+WoodenPallet {
+  translation 0.12 -3.08 2.24
+  size 0.7 1 0.14
+  mass 1
+}
