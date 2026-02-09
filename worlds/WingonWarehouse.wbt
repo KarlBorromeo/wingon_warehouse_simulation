@@ -7,13 +7,12 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/generic/TruckSimple.proto"
 EXTERNPROTO "../protos/ForkLiftCustom.proto"
 EXTERNPROTO "../protos/RackCustom.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/pallet/protos/WoodenPallet.proto"
 
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.13219219671959884 0.9530255719930072 -0.2725206088607763 1.0931523726014738
-  position -13.479108685876149 10.250160897210488 37.33039861208119
+  orientation 0.28538563507870535 0.7168670544768856 -0.636126296812479 1.1942136648631538
+  position -7.50466566578176 0.4384736893974255 8.524971867124751
 }
 TexturedBackground {
 }
@@ -830,13 +829,13 @@ Solid {
   name "solid(3)"
 }
 CardboardBox {
-  translation -4.094608249901505 -3.1599998433814656 2.939482696524333
+  translation -2.79461 -3.16 2.93948
   rotation -0.03257858912752815 0.9991499533799646 -0.02525878443777955 1.9188694350522462e-05
   size 0.31 0.37 0.24
   mass 1
 }
 Robot {
-  translation -4.09 -3.17 2.22
+  translation -1.42 -3.17 2.22
   children [
     Track {
       translation -1.5694542511823784e-05 -1.4816969873265862e-09 0.4498750153013127
@@ -867,7 +866,7 @@ Robot {
             }
             textureTransform TextureTransform {
               scale 12.4 2
-              translation -0.29780645161289465 0
+              translation -0.8087741935483754 0
             }
           }
           geometry DEF BELT_BO Box {
@@ -1004,182 +1003,7 @@ Robot {
       }
     ]
   }
-  controllerArgs [
-    "0.3"
-    "0"
-  ]
-  window "<none>"
-}
-Robot {
-  translation -2.78 -1.21 2.27
-  rotation 0 0 1 1.5708
-  children [
-    Track {
-      translation -1.569455452976598e-05 -1.4818994920062778e-09 0.44992185631192294
-      rotation -0.00805711394446907 0.99993533148636 0.008025942944553926 1.935117067524319e-05
-      children [
-        Shape {
-          appearance PBRAppearance {
-            baseColorMap ImageTexture {
-              url [
-                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_base_color.jpg"
-              ]
-            }
-            roughnessMap ImageTexture {
-              url [
-                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_roughness.jpg"
-              ]
-            }
-            metalness 0
-            normalMap ImageTexture {
-              url [
-                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_normal.jpg"
-              ]
-            }
-            occlusionMap ImageTexture {
-              url [
-                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rubber/dotted_rubber_occlusion.jpg"
-              ]
-            }
-            textureTransform TextureTransform {
-              scale 12.4 2
-              translation -0.29780645161289465 0
-            }
-          }
-          geometry DEF BELT_BO Box {
-            size 3.1 0.5 0.3
-          }
-        }
-      ]
-      boundingObject USE BELT_BO
-      physics Physics {
-        density -1
-        mass 1
-      }
-      device [
-        LinearMotor {
-          name "belt_motor"
-          maxVelocity 0.3
-          sound ""
-        }
-      ]
-      textureAnimation 0.3225806451612903 0
-    }
-    Shape {
-      appearance PBRAppearance {
-        baseColorMap ImageTexture {
-          url [
-            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_base_color.jpg"
-          ]
-        }
-        roughnessMap ImageTexture {
-          url [
-            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_roughness.jpg"
-          ]
-        }
-        metalnessMap ImageTexture {
-          url [
-            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_metalness.jpg"
-          ]
-        }
-        normalMap ImageTexture {
-          url [
-            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_normal.jpg"
-          ]
-        }
-        occlusionMap ImageTexture {
-          url [
-            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/corrugated_metal/corrugated_metal_occlusion.jpg"
-          ]
-        }
-        textureTransform TextureTransform {
-          scale 2 2
-        }
-      }
-      geometry IndexedFaceSet {
-        coord Coordinate {
-          point [
-            1.58 -0.28 0
-            1.58 -0.28 0.61
-            -1.58 -0.28 0.61
-            -1.58 -0.28 0
-            1.58 0.28 0
-            1.58 0.28 0.61
-            -1.58 0.28 0.61
-            -1.58 0.28 0
-            1.55 -0.25 0.61
-            1.55 0.25 0.61
-            -1.55 0.25 0.61
-            -1.55 -0.25 0.61
-            1.55 -0.25 0.6
-            1.55 0.25 0.6
-            -1.55 0.25 0.6
-            -1.55 -0.25 0.6
-          ]
-        }
-        texCoord TextureCoordinate {
-          point [
-            0 0
-            1 0
-            1 1
-            0 1
-            0 0.38607594936708856
-            1 0.38607594936708856
-            0 0.38607594936708856
-            0.17721518987341772 0.38607594936708856
-            0.17721518987341772 0
-            0 0
-            0.001 0
-            0.001 0.001
-            0 0.001
-          ]
-        }
-        coordIndex [
-          0, 1, 2, 3, -1, 4, 7, 6, 5, -1, 0, 4, 5, 1, -1, 7, 3, 2, 6, -1, 1, 5, 9, 8, -1, 5, 6, 10, 9, -1, 6, 2, 11, 10, -1, 2, 1, 8, 11, -1, 0, 3, 7, 4, -1, 8, 9, 13, 12, -1, 9, 10, 14, 13, -1, 10, 11, 15, 14, -1, 11, 8, 12, 15, -1
-        ]
-        texCoordIndex [
-          1, 5, 4, 0, -1, 0, 1, 5, 4, -1, 0, 8, 7, 6, -1, 0, 8, 7, 6, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1, 9, 10, 11, 12, -1
-        ]
-      }
-    }
-  ]
-  name "conveyor belt(1)"
-  boundingObject Group {
-    children [
-      Pose {
-        translation 1.565 0 0.305
-        children [
-          Box {
-            size 0.03 0.56 0.61
-          }
-        ]
-      }
-      Pose {
-        translation -1.565 0 0.305
-        children [
-          Box {
-            size 0.03 0.56 0.61
-          }
-        ]
-      }
-      Pose {
-        translation 0 -0.265 0.305
-        children [
-          Box {
-            size 3.1 0.03 0.61
-          }
-        ]
-      }
-      Pose {
-        translation 0 0.265 0.305
-        children [
-          Box {
-            size 3.1 0.03 0.61
-          }
-        ]
-      }
-    ]
-  }
+  controller "conveyor_controller"
   controllerArgs [
     "0.3"
     "0"
@@ -1194,24 +1018,24 @@ TruckSimple {
   ]
 }
 DEF forklift_1 ForkLiftCustom {
-  hidden rotation_2 -0.9317798569042572 0.07125409307185758 0.3559622908230437 1.2774528318718372e-05
-  hidden rotation_3 -7.728625528536718e-05 0.9999999956206825 5.277754744753592e-05 6.147705925411944
+  hidden rotation_2 -0.931779856816324 0.07125409306513324 0.35596229105456684 1.2774528318718372e-05
+  hidden rotation_3 -7.728604146225964e-05 0.9999999956207067 5.2777401431156165e-05 6.147705925411944
   translation 2.8476225078721673 -3.744698989974196 2.533108836464862
   rotation -0.00996983291971227 0.00011950103499643784 0.999950292840127 -3.1415253071795863
   controller "auto_controller"
   body_color 0.960784 0.760784 0.0666667
 }
 DEF forklift_2 ForkLiftCustom {
-  hidden rotation_2 -0.9317798569042572 0.07125409307185758 0.3559622908230437 1.2774528318718372e-05
-  hidden rotation_3 -7.728625528536718e-05 0.9999999956206825 5.277754744753592e-05 6.147705925411944
+  hidden rotation_2 -0.931779856816324 0.07125409306513324 0.35596229105456684 1.2774528318718372e-05
+  hidden rotation_3 -7.728604146225964e-05 0.9999999956207067 5.2777401431156165e-05 6.147705925411944
   translation 3.066482332076 1.3076280995872651 2.53310883633179
   rotation -0.009969882919697127 0.00011528003375995344 0.9999502928371395 -3.140675307179586
   robot_name "forklift_2"
   controller "auto_controller"
 }
 DEF forklift_3 ForkLiftCustom {
-  hidden rotation_2 -0.9317798569042572 0.07125409307185758 0.3559622908230437 1.2774528318718372e-05
-  hidden rotation_3 -7.728625528536718e-05 0.9999999956206825 5.277754744753592e-05 6.147705925411944
+  hidden rotation_2 -0.931779856816324 0.07125409306513324 0.35596229105456684 1.2774528318718372e-05
+  hidden rotation_3 -7.728604146225964e-05 0.9999999956207067 5.2777401431156165e-05 6.147705925411944
   translation 2.95949523710613 5.840309486829114 2.5331088363092804
   rotation -0.009969872920493804 0.00011544903381870467 0.9999502929173378 -3.1407153071795864
   robot_name "forklift_3"
@@ -1289,9 +1113,4 @@ RackCustom {
 }
 RackCustom {
   translation 28.61 0.85001 2.25998
-}
-WoodenPallet {
-  translation 0.12 -3.08 2.24
-  size 0.7 1 0.14
-  mass 1
 }
