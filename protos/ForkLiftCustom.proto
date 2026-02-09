@@ -264,11 +264,14 @@ PROTO ForkLiftCustom [
         }
         device [
             LinearMotor {
-            name "slider_motor"
-            minPosition 0.001
-            maxPosition 2
-            maxForce 50
-            multiplier 3
+                name "slider_motor"
+                minPosition 0.001
+                maxPosition 2
+                maxForce 50
+                multiplier 3
+            }
+            PositionSensor {
+                name "slider_position_sensor"
             }
         ]
         endPoint Solid {

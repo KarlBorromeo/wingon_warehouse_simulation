@@ -1,5 +1,13 @@
-from controller import Robot, Motor, Supervisor
+from controller import Robot, Motor, Supervisor, Field, PositionSensor
 import math
+
+# Constants
+speed = -2.0
+max_steer_angle = 1.0 
+min_forklift_height = 0.001
+max_forklift_height = 2.0
+wheel_base = 0.83
+track_width = 0.63
 
 def normalize_angle(angle):
     """Normalize angle to [-pi, pi]."""
@@ -24,14 +32,14 @@ def ackermann_rear_wheel_angles(wheelbase, track_width, turn_radius):
     return inner, outer
 
 def turn_n_degrees_rear_steer(
-    robot,
-    translation_field,
-    rotation_field,
-    target_deg,
-    wheelbase=0.35,
-    track_width=0.25,
-    turn_radius=1.0,
-    drive_speed=2.0
+    robot: Supervisor,
+    translation_field: Field,
+    rotation_field: Field,
+    target_deg: float,
+    # wheelbase=0.35,
+    # track_width=0.25,
+    turn_radius: float=1.0,
+    # drive_speed=2.0
 ):
     """
     Turn the robot by N degrees using rear-wheel steering.
@@ -42,7 +50,7 @@ def turn_n_degrees_rear_steer(
 
     # Compute steering angles
     delta_inner, delta_outer = ackermann_rear_wheel_angles(
-        wheelbase, track_width, turn_radius
+        wheel_base, track_width, turn_radius
     )
 
     # Left turn
@@ -54,8 +62,8 @@ def turn_n_degrees_rear_steer(
         rear_right_steer_motor.setPosition(delta_inner)
 
     # Drive forward
-    front_left_motor.setVelocity(drive_speed)
-    front_right_motor.setVelocity(drive_speed)
+    front_left_motor.setVelocity(speed)
+    front_right_motor.setVelocity(speed)
 
     # Control loop
     while robot.step(timestep) != -1:
@@ -71,6 +79,23 @@ def turn_n_degrees_rear_steer(
     rear_left_steer_motor.setPosition(0.0)
     rear_right_steer_motor.setPosition(0.0)
 
+def lift(slider_motor: Motor, pos_sensor: PositionSensor, target_height: float, speed: float=0.2):
+    if target_height < min_forklift_height or target_height > max_forklift_height:
+        print(f"Error: Target height {target_height} is out of bounds.")
+        return
+    
+    slider_motor.setVelocity(speed)
+    slider_motor.setPosition(target_height)
+
+    while robot.step(timestep) != -1:
+        current_height = pos_sensor.getValue()
+        height_error = target_height - current_height
+        
+        print(f"Current height: {current_height:.3f}, Target height: {target_height:.3f}, Error: {height_error:.3f}")
+
+        if abs(height_error) < 0.01:
+            break
+
 
 robot = Supervisor()
 timestep = int(robot.getBasicTimeStep())
@@ -80,15 +105,6 @@ print(f"Checking if robot: {robot.getName()} has supervisor capabilities...")
 if not robot.supervisor:
     print("Error: This controller requires supervisor capabilities.")
     exit(1)
-
-
-# Constants
-speed = -2.0
-max_steer_angle = 1.0 
-min_forklift_height = 0.001
-max_forklift_height = 0.1
-wheel_base = 0.83
-track_width = 0.63
 
 # Motors
 front_left_motor: Motor = robot.getDevice("front_left_motor")
@@ -113,16 +129,19 @@ rear_right_steer_motor.setVelocity(speed)
 rear_left_steer_motor.setPosition(0.0)
 rear_right_steer_motor.setPosition(0.0)
 
-translation_field = robot.getFromDef("FORKLIFT").getField("translation")
-rotation_field = robot.getFromDef("FORKLIFT").getField("rotation")
+slider_position_sensor: PositionSensor = robot.getDevice("slider_position_sensor")
+slider_position_sensor.enable(timestep)
+
+translation_field = robot.getFromDef(robot.getName()).getField("translation")
+rotation_field = robot.getFromDef(robot.getName()).getField("rotation")
 
 turned = False
 while robot.step(timestep) != -1:
-    current_pos = translation_field.getSFVec3f()
-    current_rotation = rotation_field.getSFRotation()
+    # current_pos = translation_field.getSFVec3f()
+    # current_rotation = rotation_field.getSFRotation()
 
-    print(f"Current position: {current_pos}")
-    print(f"Current rotation: {current_rotation}")
+    # print(f"Current position: {current_pos}")
+    # print(f"Current rotation: {current_rotation}")
 
     if not turned:
         print("Turning 90 degrees...")
@@ -131,11 +150,15 @@ while robot.step(timestep) != -1:
             translation_field,
             rotation_field,
             target_deg=-90,
-            wheelbase=wheel_base,
-            track_width=track_width,
+            # wheelbase=wheel_base,
+            # track_width=track_width,
             turn_radius=1.0,
-            drive_speed=-2.0
+            # drive_speed=-2.0
         )
         turned = True
+    if turned:
+        print("Lifting forklift to 1.5 meters...")
+        lift(slider_motor, slider_position_sensor, target_height=1.5, speed=0.2)
+        turned = False 
 
 
