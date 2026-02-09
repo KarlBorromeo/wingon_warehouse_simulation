@@ -30,14 +30,15 @@ track_width = 0.63
 PLANS = {
     "forklift_1": [
         LinearMoveAction(distance=2.0, speed=speed),
-        TurnAction(degrees=90.0, turn_radius=1.0),
-        LiftAction(height=1.0, speed=0.2),
+        LinearMoveAction(distance=2.0, speed=-speed),
+        # TurnAction(degrees=90.0, turn_radius=1.0),
+        # LiftAction(height=1.0, speed=0.2),
     ],
 
-    "forklift_2": [
-        LinearMoveAction(distance=0.5, speed=speed),
-        TurnAction(degrees=-90.0, turn_radius=1.0),
-    ],
+    # "forklift_2": [
+    #     LinearMoveAction(distance=0.5, speed=speed),
+    #     TurnAction(degrees=-90.0, turn_radius=1.0),
+    # ],
     # "forklift_3": [
     #     LiftAction(height=max_forklift_height, speed=0.2),
     #     LinearMoveAction(distance=1.5, speed=speed),
