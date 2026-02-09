@@ -5,360 +5,370 @@ PROTO ForkLiftCustom [
   field SFString   robot_name    "forklift_1"
   field SFColor body_color       0.752941 0.109804 0.156863
   field SFBool      supervised    TRUE
-  field MFNode itemSlot []
 ]
 {
     Robot {
-        translation IS translation
-        rotation IS rotation
-        name IS robot_name
-        controller "forklift_controller"
+    translation IS translation
+    rotation IS rotation
+    name IS robot_name
+    children [
+        Solid {
+        translation -0.87 -0.0900021 0.709926
+        rotation 1.88116e-06 -1 -9.58979e-09 -1.5708053071795867
         children [
-            Solid {
-            translation 1.14 -0.09 0.819925
-            rotation -0.707103781181112 -3.3905189507769944e-09 0.7071097811792553 -3.141589999999999
+            Shape {
+            appearance MetalStainlessSteelCable {
+            }
+            geometry Mesh {
+                url [
+                "../meshes/3D Fork Truck - Guide.stl"
+                ]
+            }
+            }
+        ]
+        name "guide"
+        }
+        HingeJoint {
+        jointParameters HingeJointParameters {
+            position 2.4574385340907348e-08
+            axis 0 0 1
+            anchor 0.856 -0.406 -0.112
+        }
+        device [
+            RotationalMotor {
+            name "rear_left_steer_motor"
+            }
+        ]
+        endPoint Solid {
+            translation 0.8559925946849121 -0.4059946899510205 -0.11199679702618275
+            rotation -0.931779857607733 0.07125409312565309 0.3559622889708316 1.2774528318718372e-05
             children [
-                Shape {
-                appearance MetalStainlessSteelCable {
-                }
-                geometry Mesh {
-                    url [
-                    "../meshes/3D Fork Truck - Guide.stl"
-                    ]
-                }
-                }
-            ]
-            name "guide"
-            boundingObject Pose {
-                translation -0.15 0 -0.05
-                children [
-                Box {
-                    size 2.2 0.86 0.13
-                }
-                ]
-            }
-            }
             HingeJoint {
-            jointParameters HingeJointParameters {
-                position -1.326648693181693e-05
-                axis 0 0 1
-                anchor 0.856 -0.406 -0.112
-            }
-            device [
-                RotationalMotor {
-                name "front_right_steer_motor"
-                }
-            ]
-            endPoint Solid {
-                translation 0.8559925947554888 -0.4059946898525965 -0.11199679702618275
-                rotation -0.804396677041322 0.06151835689553724 -0.590898872675987 1.4797475809911967e-05
-                children [
-                HingeJoint {
-                    jointParameters HingeJointParameters {
-                    position 40.4591183273302
-                    axis 0 1 0
-                    }
-                    device [
-                    RotationalMotor {
-                        name "front_right_motor"
-                    }
-                    ]
-                    endPoint Solid {
-                    translation 1.405661335929232e-05 -1.0195740011042918e-05 0.00011223322050771253
-                    rotation -2.957023189119656e-06 0.9999999999791859 -5.734503509811535e-06 2.7600064842322563
-                    children [
-                        Pose {
-                        rotation 1 0 0 -1.5707953071795862
-                        children [
-                            Shape {
-                            appearance TireRubber {
-                            }
-                            geometry Mesh {
-                                url [
-                                "../meshes/3D Fork Truck Wheel.stl"
-                                ]
-                            }
-                            }
-                        ]
-                        }
-                    ]
-                    name "front right wheel"
-                    boundingObject Pose {
-                        translation 0 -0.09 0
-                        rotation 1 0 0 -1.5707953071795862
-                        children [
-                        Shape {
-                            geometry Cylinder {
-                            height 0.16
-                            radius 0.23
-                            }
-                        }
-                        ]
-                    }
-                    physics Physics {
-                        mass 1
-                    }
-                    }
-                }
-                ]
-                name "front right steer"
-                physics Physics {
-                }
-            }
-            }
-            HingeJoint {
-            jointParameters HingeJointParameters {
-                position -7.811059578124523e-06
-                axis 0 0 1
-                anchor 0.856 0.225 -0.112
-            }
-            device [
-                RotationalMotor {
-                name "front_left_steer_motor"
-                }
-            ]
-            endPoint Solid {
-                translation 0.8559876543281947 0.22500829697448665 -0.11199839516622737
-                rotation 0.31288413159437256 0.014459060086439062 0.9496812390364738 0.00014512010997972923
-                children [
-                HingeJoint {
-                    jointParameters HingeJointParameters {
-                    position 40.44405174809991
-                    axis 0 1 0
-                    }
-                    device [
-                    RotationalMotor {
-                        name "front_left_motor"
-                    }
-                    ]
-                    endPoint Solid {
-                    translation 1.5144814639933559e-05 -1.151983813479935e-06 -7.487115718726733e-05
-                    rotation 0.37759135843961855 -3.305657543265632e-06 -0.9259723354511171 3.141589882743967
-                    children [
-                        Pose {
-                        rotation 1 0 0 -1.5707953071795862
-                        children [
-                            Shape {
-                            appearance TireRubber {
-                            }
-                            geometry Mesh {
-                                url [
-                                "../meshes/3D Fork Truck Wheel.stl"
-                                ]
-                            }
-                            }
-                        ]
-                        }
-                    ]
-                    name "front left wheel"
-                    boundingObject Pose {
-                        translation 0 -0.09 0
-                        rotation 1 0 0 -1.5707953071795862
-                        children [
-                        Shape {
-                            geometry Cylinder {
-                            height 0.16
-                            radius 0.23
-                            }
-                        }
-                        ]
-                    }
-                    physics Physics {
-                        mass 1
-                    }
-                    }
-                }
-                ]
-                name "front left steer"
-                physics Physics {
-                }
-            }
-            }
-            HingeJoint {
-            jointParameters HingeJointParameters {
-                position 19.942338380769954
+                jointParameters HingeJointParameters {
+                position 43.84681776910916
                 axis 0 1 0
-                anchor -0.616 -0.406 -0.082
-            }
-            device [
-                RotationalMotor {
-                name "rear_right_motor"
                 }
-            ]
-            endPoint Solid {
-                translation -0.615982950141505 -0.4060023720920453 -0.0820785796069882
-                rotation 3.779073296531758e-05 0.9999999967679081 7.096509392089699e-05 1.0927824036864189
+                endPoint Solid {
+                translation -4.0976433010189345e-05 -1.0195740011042657e-05 -0.00010542682819105819
+                rotation -7.728796584892758e-05 0.9999999956204888 5.277871556402881e-05 6.147705925411941
                 children [
-                Pose {
+                    Pose {
                     rotation 1 0 0 -1.5707953071795862
                     children [
-                    Shape {
-                        appearance TireRubber {
-                        }
-                        geometry Mesh {
-                        url [
-                            "../meshes/3D Fork Truck Wheel.stl"
-                        ]
-                        }
-                    }
-                    ]
-                }
-                ]
-                name "rear right wheel"
-                boundingObject Pose {
-                translation 0 -0.09 0
-                rotation 1 0 0 -1.5707953071795862
-                children [
-                    Shape {
-                    geometry Cylinder {
-                        height 0.16
-                        radius 0.23
-                    }
-                    }
-                ]
-                }
-                physics Physics {
-                mass 1
-                }
-            }
-            }
-            HingeJoint {
-            jointParameters HingeJointParameters {
-                position 40.5708910371956
-                axis 0 1 0
-                anchor -0.616 0.227 -0.082
-            }
-            device [
-                RotationalMotor {
-                name "rear_left_motor"
-                }
-            ]
-            endPoint Solid {
-                translation -0.616194967470165 0.22699991012839085 -0.08167958142885037
-                rotation 0.1344979117384924 1.8933964516698467e-05 -0.9909138768730055 3.141579302172896
-                children [
-                Pose {
-                    rotation 1 0 0 -1.5707953071795862
-                    children [
-                    Shape {
-                        appearance TireRubber {
-                        }
-                        geometry Mesh {
-                        url [
-                            "../meshes/3D Fork Truck Wheel.stl"
-                        ]
-                        }
-                    }
-                    ]
-                }
-                ]
-                name "rear left wheel"
-                boundingObject Pose {
-                translation 0 -0.09 0
-                rotation 1 0 0 -1.5707953071795862
-                children [
-                    Shape {
-                    geometry Cylinder {
-                        height 0.16
-                        radius 0.23
-                    }
-                    }
-                ]
-                }
-                physics Physics {
-                mass 1
-                }
-            }
-            }
-            SliderJoint {
-            jointParameters JointParameters {
-                maxStop 3
-            }
-            device [
-                LinearMotor {
-                name "slider_motor"
-                }
-            ]
-            endPoint Solid {
-                translation 1.26 0 -0.19
-                children [
-                Solid {
-                    translation 0 -0.09 0.18
-                    rotation -2.6435299999266276e-06 0.9999999999722444 -6.9658399998066585e-06 1.57081
-                    children [
-                    Shape {
-                        appearance MetalStainlessSteelCable {
-                        }
-                        geometry Mesh {
-                        url [
-                            "../meshes/3D Fork Truck - Fork.stl"
-                        ]
-                        }
-                    }
-                    ]
-                    name "fork_lift"
-                    boundingObject Group {
-                    children [
-                        Pose {
-                        translation 0.29 -0.34 0.4
-                        children [
-                            Box {
-                            size 0.05 0.1 0.8
-                            }
-                        ]
-                        }
-                        Pose {
-                        translation 0.29 0.34 0.4
-                        children [
-                            Box {
-                            size 0.05 0.1 0.8
-                            }
-                        ]
-                        }
-                    ]
-                    }
-                }
-                ]
-                name "slider"
-                contactMaterial "forkGrip"
-            }
-            }
-            Solid {
-            translation 0 -0.09 -0.20118002701290938
-            rotation 1 0 0 -3.1415926535897922
-            children [
-                Pose {
-                    translation 0.65062 2.62823e-06 -0.579379
-                    rotation -0.7071062811857941 0.7071072811861918 -1.0335604110025788e-06 3.14159
-                    children [
                         Shape {
-                        appearance GalvanizedMetal {
+                        appearance TireRubber {
                         }
                         geometry Mesh {
                             url [
-                            "../meshes/ZED2iPikabot_ver2.STL"
+                            "../meshes/3D Fork Truck Wheel.stl"
                             ]
                         }
                         }
                     ]
                     }
-                Shape {
-                appearance Plastic {
-                        colorOverride IS body_color
+                ]
+                name "front right wheel"
+                boundingObject Pose {
+                    translation 0 -0.09 0
+                    rotation 1 0 0 -1.5707953071795862
+                    children [
+                    Shape {
+                        appearance TireRubber {
+                        }
+                        geometry Cylinder {
+                        height 0.06
+                        radius 0.23
+                        }
                     }
-                    geometry Mesh {
-                        url [
-                        "../meshes/3D Fork Truck - Body main.stl"
-                        ]
-                    }
+                    ]
                 }
+                physics Physics {
+                    mass 1
+                }
+                }
+            }
             ]
-            name "body"
+            name "rear left steer"
+            physics Physics {
+            }
+        }
+        }
+        HingeJoint {
+        jointParameters HingeJointParameters {
+            position -2.7070031844061076e-08
+            axis 0 0 1
+            anchor 0.856 0.225 -0.112
+        }
+        device [
+            RotationalMotor {
+            name "rear_right_steer_motor"
             }
         ]
-        physics Physics {
+        endPoint Solid {
+            translation 0.8559876542636115 0.22500829687838783 -0.11199839516622737
+            rotation 0.2976804932211904 0.013757627747924658 0.9545664207556949 0.0001525319049940637
+            children [
+            HingeJoint {
+                jointParameters HingeJointParameters {
+                position 43.8505276166329
+                axis 0 1 0
+                }
+                endPoint Solid {
+                translation 4.984401071342038e-06 -1.151983813479965e-06 7.622474227571014e-05
+                rotation -0.9677257969528484 1.8098177743084889e-06 -0.25200551959966905 3.1415864660771864
+                children [
+                    Pose {
+                    rotation 1 0 0 -1.5707953071795862
+                    children [
+                        Shape {
+                        appearance TireRubber {
+                        }
+                        geometry Mesh {
+                            url [
+                            "../meshes/3D Fork Truck Wheel.stl"
+                            ]
+                        }
+                        }
+                    ]
+                    }
+                ]
+                name "front left wheel"
+                boundingObject Pose {
+                    translation 0 -0.09 0
+                    rotation 1 0 0 -1.5707953071795862
+                    children [
+                    Shape {
+                        appearance TireRubber {
+                        }
+                        geometry Cylinder {
+                        height 0.06
+                        radius 0.23
+                        }
+                    }
+                    ]
+                }
+                physics Physics {
+                    mass 1
+                }
+                }
+            }
+            ]
+            name "rear right steer"
+            physics Physics {
+            }
+        }
+        }
+        HingeJoint {
+        jointParameters HingeJointParameters {
+            position 23.35902225838144
+            axis 0 1 0
+            anchor -0.616 -0.406 -0.082
+        }
+        device [
+            RotationalMotor {
+            name "front_left_motor"
+            }
+        ]
+        endPoint Solid {
+            translation -0.6159950638405164 -0.4060023720920453 -0.08191974361932736
+            rotation 4.365077834394397e-05 0.999999998547459 -3.161790251829958e-05 4.509466277005361
+            children [
+            Pose {
+                rotation 1 0 0 -1.5707953071795862
+                children [
+                Shape {
+                    appearance TireRubber {
+                    }
+                    geometry Mesh {
+                    url [
+                        "../meshes/3D Fork Truck Wheel.stl"
+                    ]
+                    }
+                }
+                ]
+            }
+            ]
+            name "front left wheel"
+            boundingObject Pose {
+            translation 0 -0.09 0
+            rotation 1 0 0 -1.5707953071795862
+            children [
+                Shape {
+                appearance TireRubber {
+                }
+                geometry Cylinder {
+                    height 0.06
+                    radius 0.23
+                }
+                }
+            ]
+            }
+            physics Physics {
+            mass 1
+            }
+        }
+        }
+        HingeJoint {
+        jointParameters HingeJointParameters {
+            position 44.0027054803924
+            axis 0 1 0
+            anchor -0.616 0.227 -0.082
+        }
+        device [
+            RotationalMotor {
+            name "front_right_motor"
+            }
+        ]
+        endPoint Solid {
+            translation -0.615904878484682 0.22699991012839085 -0.0823628116212082
+            rotation -0.999947938188435 3.8676537636138375e-06 0.010203964804883153 3.1416320541659317
+            children [
+            Pose {
+                rotation 1 0 0 -1.5707953071795862
+                children [
+                Shape {
+                    appearance TireRubber {
+                    }
+                    geometry Mesh {
+                    url [
+                        "../meshes/3D Fork Truck Wheel.stl"
+                    ]
+                    }
+                }
+                ]
+            }
+            ]
+            name "front right wheel"
+            boundingObject Pose {
+            translation 0 -0.09 0
+            rotation 1 0 0 -1.5707953071795862
+            children [
+                Shape {
+                geometry Cylinder {
+                    height 0.06
+                    radius 0.23
+                }
+                }
+            ]
+            }
+            physics Physics {
+            mass 1
+            }
+        }
+        }
+        SliderJoint {
+        jointParameters JointParameters {
+            position 0.002990192003863563
+            maxStop 3
+        }
+        device [
+            LinearMotor {
+            name "slider_motor"
+            minPosition 0.001
+            maxPosition 2
+            maxForce 50
+            multiplier 3
+            }
+        ]
+        endPoint Solid {
+            translation -1 -0.0600029 0.11300819200386357
+            rotation 0.7071017811704147 -8.704197306277629e-08 -0.7071117811673199 3.14159
+            children [
+            Shape {
+                appearance MetalStainlessSteelCable {
+                }
+                geometry Mesh {
+                url [
+                    "../meshes/3D Fork Truck - Fork.stl"
+                ]
+                }
+            }
+            ]
+            name "slider"
+            contactMaterial "forkGrip"
+            boundingObject Group {
+            children [
+                Pose {
+                translation 0.29 -0.34 0.4
+                children [
+                    Box {
+                    size 0.05 0.1 0.8
+                    }
+                ]
+                }
+                Pose {
+                translation 0.29 0.34 0.4
+                children [
+                    Box {
+                    size 0.05 0.1 0.8
+                    }
+                ]
+                }
+                Pose {
+                translation -0.02 0 -0.01
+                children [
+                    Box {
+                    size 0.4 0.8 0.1
+                    }
+                ]
+                }
+            ]
+            }
+            physics Physics {
             density 500
             mass 1
+            }
         }
+        }
+        Solid {
+        translation 0.24 -0.09 -0.15118
+        rotation -4.7949e-09 1 1.32679e-06 3.14159
+        children [
+            Pose {
+            translation 0.65062 2.62823e-06 -0.579379
+            rotation -0.7071062811857941 0.7071072811861918 -1.0335604110025788e-06 3.14159
+            children [
+                Shape {
+                appearance GalvanizedMetal {
+                }
+                geometry Mesh {
+                    url [
+                    "../meshes/ZED2iPikabot_ver2.STL"
+                    ]
+                }
+                }
+            ]
+            }
+            Shape {
+            appearance Plastic {
+                colorOverride IS body_color
+            }
+            geometry Mesh {
+                url [
+                "../meshes/3D Fork Truck - Body main.stl"
+                ]
+            }
+            }
+        ]
+        name "body"
+        boundingObject Pose {
+            translation 0.1 0 -0.25
+            children [
+            Box {
+                size 0.9 0.9 0.7
+            }
+            ]
+        }
+        physics Physics {
+            mass 1
+        }
+        }
+    ]
+    physics Physics {
+        density 1
+        mass 1
+    }
+    controller "forklift_controller"
+    supervisor IS supervised
     }
 }
