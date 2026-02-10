@@ -7,7 +7,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/generic/TruckSimple.proto"
 EXTERNPROTO "../protos/ForkLiftCustom.proto"
 EXTERNPROTO "../protos/RackCustom.proto"
-EXTERNPROTO "../protos/WoodenPallet.proto"
+EXTERNPROTO "../protos/WoodenPalletCustom.proto"
 
 WorldInfo {
 }
@@ -1161,7 +1161,7 @@ DEF box_spawner Solid {
   translation -2.79461 -3.16 2.93948
   name "box_spawner"
 }
-WoodenPallet {
+WoodenPalletCustom {
   translation 0.64 -4.22999 2.25998
   rotation -0.9346383711608598 -0.30175911983370024 0.1881290747092686 -5.307179586466759e-06
 }
