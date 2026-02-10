@@ -1,41 +1,74 @@
 from controller import Supervisor, Motor
+import math
+
+def get_box_proto(x, y, z, add_def=True):
+    if add_def:
+        return f"""
+        DEF BOX_1 CardboardBox {{
+            translation {x} {y} {z}
+            size 0.31 0.37 0.24
+            mass 1
+        }}
+        """
+    
+    return f"""
+    CardboardBox {{
+        translation {x} {y} {z}
+        size 0.31 0.37 0.24
+        mass 1
+    }}
+    """
 
 robot = Supervisor()
 timestep = int(robot.getBasicTimeStep())
 
-belt_motor: Motor = robot.getDevice("belt_motor")
+belt_motor = robot.getDevice("belt_motor")
 belt_motor.setPosition(float('inf'))
-belt_motor.setVelocity(0.0)
 
-# Get box spawner position
 box_spawner = robot.getFromDef("box_spawner")
 box_spawner_tf = box_spawner.getField("translation")
 
-# Timing
-spawn_interval = 5.0  # seconds
-last_spawn_time = 0.0
-sim_time = 0.0
+box = None
+spawned = False
+pallet = None
 
+x, y, z = box_spawner_tf.getSFVec3f()
 while robot.step(timestep) != -1:
     belt_motor.setVelocity(0.3)
 
-    sim_time += timestep / 1000.0
+    if not pallet:
+        pallet = robot.getFromDef("PALLET")
 
-    if sim_time - last_spawn_time >= spawn_interval:
-        last_spawn_time = sim_time
+    if not spawned:
+        box_proto = get_box_proto(x, y, z)
 
-        x, y, z = box_spawner_tf.getSFVec3f()
-        # z += 0.02  # small lift to avoid collision with belt
+        robot.getRoot().getField("children").importMFNodeFromString(-1, box_proto)
+        spawned = True
+        continue
 
-        box_proto = f"""
-        CardboardBox {{
-          translation {x} {y} {z}
-          rotation -0.3016120512105832 -0.9349314530822059 -0.18690465109819893 2.593254445485388e-06
-          size 0.31 0.37 0.24
-          mass 1
-        }}
-        """
+    if box is None:
+        box = robot.getFromDef("BOX_1")
+        continue
 
-        robot.getRoot().getField("children").importMFNodeFromString(
-            -1, box_proto
-        )
+    pos = box.getPosition()
+    distance_travelled = math.hypot(pos[0] - x, pos[2] - z)
+    print(f"Distance travelled by box: {distance_travelled:.3f}")
+
+    if distance_travelled >= 2.7:
+        print("Box has reached the end of the conveyor.")
+
+        pallet_box_slot1 = pallet.getField("boxSlot1")
+        pallet_box_slot2 = pallet.getField("boxSlot2")
+
+        if pallet_box_slot1.getCount() == 0:
+            pallet_box_slot1.importMFNodeFromString(0, get_box_proto(0.0, 0.0, 0.0, add_def=False))
+        elif pallet_box_slot2.getCount() == 0:
+            pallet_box_slot2.importMFNodeFromString(0, get_box_proto(0.0, 0.0, 0.0, add_def=False))
+        else:
+            box.remove()
+
+        box = None
+        spawned = False
+
+
+        
