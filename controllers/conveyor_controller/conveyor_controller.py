@@ -39,6 +39,7 @@ admin.getField("current_pallet").setSFString(current_pallet_field)
 box = None
 spawned = False
 pallet = None
+full = False
 
 x, y, z = box_spawner_tf.getSFVec3f()
 while robot.step(timestep) != -1:
@@ -59,9 +60,19 @@ while robot.step(timestep) != -1:
             print(f"Spawned {current_pallet_field}")
         else:
             print(f"{current_pallet_field} already exists")
+            # then check transported field in the pallet and if it's true, then increment pallet number and update current pallet field in admin
+            transported_field = pallet.getField("transported")
+            if transported_field.getSFBool():
+                print(f"{current_pallet_field} has been transported. Moving to next pallet.")
+                pallet_number += 1
+                current_pallet_field = f"PALLET_{pallet_number}"
+                admin.getField("current_pallet").setSFString(current_pallet_field)
+                pallet = None
+                full = False  
 
+                continue 
 
-    if not spawned:
+    if not spawned and not full:
         box_proto = get_box_proto(x, y, z)
 
         robot.getRoot().getField("children").importMFNodeFromString(-1, box_proto)
@@ -86,7 +97,8 @@ while robot.step(timestep) != -1:
             pallet_box_slot1.importMFNodeFromString(0, get_box_proto(0.0, 0.0, 0.0, add_def=False))
         elif pallet_box_slot2.getCount() == 0:
             pallet_box_slot2.importMFNodeFromString(0, get_box_proto(0.0, 0.0, 0.0, add_def=False))
-        
+            full = True
+
         box.remove()
         box = None
         spawned = False
