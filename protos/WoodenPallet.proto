@@ -1,0 +1,1344 @@
+#VRML_SIM R2025a utf8
+PROTO WoodenPallet [
+  field SFVec3f    translation   7.59 6.44113e-06 2.25998
+  field SFRotation rotation      -3.3977899999752476e-06 1.73923999998733e-06 -0.9999999999927152 -1.5707953071795862
+  field SFBool      supervised    TRUE
+]
+{
+    Solid {
+        translation IS translation
+        rotation IS rotation
+        children [
+            Pose {
+            translation -0.36000000000000004 -0.54 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 -0.54 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0.36000000000000004 -0.54 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation -0.36000000000000004 0 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0.36000000000000004 0 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation -0.36000000000000004 0.54 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0.54 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0.36000000000000004 0.54 0.099
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 0.16000000000000003 0.24
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 0.12 0.154
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 -0.54 0.011000000000000001
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.44
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.12 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0 0.011000000000000001
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.44
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.12 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0.54 0.011000000000000001
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.44
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.12 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation -0.36000000000000004 0 0.187
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 2.4 0.16000000000000003
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 1.2 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0 0.187
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 2.4 0.16000000000000003
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 1.2 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0.36000000000000004 0 0.187
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 2.4 0.16000000000000003
+                    }
+                }
+                geometry Box {
+                    size 0.08000000000000002 1.2 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 -0.5599999999999999 0.209
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.16
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.08 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 -0.33599999999999997 0.209
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.16
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.08 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 -0.11199999999999996 0.209
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.16
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.08 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0.11199999999999996 0.209
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.16
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.08 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0.336 0.209
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.16
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.08 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0 0.5599999999999999 0.209
+            children [
+                Shape {
+                appearance PBRAppearance {
+                    baseColorMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_base_color.jpg"
+                    ]
+                    filtering 5
+                    }
+                    roughnessMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_roughness.jpg"
+                    ]
+                    filtering 5
+                    }
+                    metalness 0
+                    normalMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_normal.jpg"
+                    ]
+                    filtering 5
+                    }
+                    occlusionMap ImageTexture {
+                    url [
+                        "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/rough_pine/rough_pine_occlusion.jpg"
+                    ]
+                    filtering 5
+                    }
+                    textureTransform TextureTransform {
+                    scale 1.6 0.16
+                    }
+                }
+                geometry Box {
+                    size 0.8 0.08 0.022000000000000002
+                }
+                }
+            ]
+            }
+            Solid {
+            translation 0 0.32 0.33
+            children [
+                Solid {
+                translation 0 0 0.09
+                children [
+                    DEF BACK Pose {
+                    translation -0.34975 0 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.0005 0.39990000000000003 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF FRONT Pose {
+                    translation 0.34975 0 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.0005 0.39990000000000003 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF RIGHT Pose {
+                    translation 0 -0.19975 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.0005 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF LEFT Pose {
+                    translation 0 0.19975 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.0005 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF BOTTOM Pose {
+                    translation 0 0 -0.14975
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.39990000000000003 0.0005
+                        }
+                        }
+                    ]
+                    }
+                    DEF TOP Pose {
+                    translation 0 0 0.14975
+                    rotation 0 1 0 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.39990000000000003 0.0005
+                        }
+                        }
+                    ]
+                    }
+                ]
+                name "cardboard box"
+                model "cardboard box"
+                boundingObject Box {
+                    size 0.7 0.4 0.3
+                }
+                physics Physics {
+                    mass 1
+                }
+                }
+            ]
+            name "box_1"
+            }
+            Solid {
+            translation 0 -0.25 0.33
+            children [
+                Solid {
+                translation 0 0 0.09
+                children [
+                    DEF BACK Pose {
+                    translation -0.34975 0 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_back_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.0005 0.39990000000000003 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF FRONT Pose {
+                    translation 0.34975 0 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_front_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.0005 0.39990000000000003 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF RIGHT Pose {
+                    translation 0 -0.19975 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_right_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.0005 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF LEFT Pose {
+                    translation 0 0.19975 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_left_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.0005 0.2999
+                        }
+                        }
+                    ]
+                    }
+                    DEF BOTTOM Pose {
+                    translation 0 0 -0.14975
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_bottom_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.39990000000000003 0.0005
+                        }
+                        }
+                    ]
+                    }
+                    DEF TOP Pose {
+                    translation 0 0 0.14975
+                    rotation 0 1 0 0
+                    children [
+                        Shape {
+                        appearance PBRAppearance {
+                            baseColorMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_base_color.jpg"
+                            ]
+                            }
+                            roughness 0.7
+                            roughnessMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_roughness.jpg"
+                            ]
+                            }
+                            metalness 0
+                            normalMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_normal.jpg"
+                            ]
+                            }
+                            occlusionMap ImageTexture {
+                            url [
+                                "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/textures/cardboard/cardboard_top_occlusion.jpg"
+                            ]
+                            }
+                        }
+                        geometry Box {
+                            size 0.6999 0.39990000000000003 0.0005
+                        }
+                        }
+                    ]
+                    }
+                ]
+                name "cardboard box"
+                model "cardboard box"
+                boundingObject Box {
+                    size 0.7 0.4 0.3
+                }
+                physics Physics {
+                    mass 1
+                }
+                }
+            ]
+            name "box_2"
+            }
+        ]
+        name "wooden pallet(1)"
+        model "wooden pallet"
+        boundingObject Group {
+            children [
+            Pose {
+                translation 0 -0.54 0.08800000000000001
+                children [
+                Box {
+                    size 0.8 0.12 0.17600000000000002
+                }
+                ]
+            }
+            Pose {
+                translation 0 0 0.08800000000000001
+                children [
+                Box {
+                    size 0.8 0.12 0.17600000000000002
+                }
+                ]
+            }
+            Pose {
+                translation 0 0.54 0.08800000000000001
+                children [
+                Box {
+                    size 0.8 0.12 0.17600000000000002
+                }
+                ]
+            }
+            Pose {
+                translation 0 0 0.198
+                children [
+                Box {
+                    size 0.8 1.2 0.044000000000000004
+                }
+                ]
+            }
+            ]
+        }
+        physics Physics {
+            density -1
+            mass 1
+        }
+        }
+}

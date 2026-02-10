@@ -10,6 +10,40 @@ PROTO RackCustom [
         rotation IS rotation
         children [
             Pose {
+            translation 0.01 -0.9 0.19
+            children [
+                Shape {
+                appearance Appearance {
+                    texture ImageTexture {
+                    url [
+                        "../protos/DICT_6X6_250_030.png"
+                    ]
+                    }
+                }
+                geometry Box {
+                    size 0.001 0.15 0.15
+                }
+                }
+            ]
+            }
+            Pose {
+            translation 0.01 0.9 0.19
+            children [
+                Shape {
+                appearance Appearance {
+                    texture ImageTexture {
+                    url [
+                        "../protos/DICT_6X6_250_030.png"
+                    ]
+                    }
+                }
+                geometry Box {
+                    size 0.001 0.15 0.15
+                }
+                }
+            ]
+            }
+            Pose {
             rotation 0.5773509358554485 0.5773489358556708 0.5773509358554485 2.0944
             children [
                 Shape {
@@ -24,17 +58,55 @@ PROTO RackCustom [
             ]
             }
         ]
-        boundingObject Pose {
-            rotation 0.5773509358554485 0.5773489358556708 0.5773509358554485 2.0944
+        boundingObject Group {
             children [
-            Shape {
-                appearance ThreadMetalPlate {
+            Pose {
+                translation -0.3 0 1
+                children [
+                Box {
+                    size 0.7 0.1 2
                 }
-                geometry Mesh {
-                url [
-                    "../meshes/WareHouse Rack v1.2.stl"
                 ]
+            }
+            Pose {
+                translation -0.3 -1.75 1
+                children [
+                Box {
+                    size 0.7 0.1 2
                 }
+                ]
+            }
+            Pose {
+                translation -0.3 1.74 1
+                children [
+                Box {
+                    size 0.7 0.1 2
+                }
+                ]
+            }
+            Pose {
+                translation -0.3 0.01 0.19
+                children [
+                Box {
+                    size 0.6 3.6 0.1
+                }
+                ]
+            }
+            Pose {
+                translation -0.3 0.01 1
+                children [
+                Box {
+                    size 0.6 3.6 0.1
+                }
+                ]
+            }
+            Pose {
+                translation -0.3 0.01 1.81
+                children [
+                Box {
+                    size 0.6 3.6 0.1
+                }
+                ]
             }
             ]
         }
