@@ -2,10 +2,11 @@
 PROTO RackCustom [
   field SFVec3f    translation   7.59 6.44113e-06 2.25998
   field SFRotation rotation      -3.3977899999752476e-06 1.73923999998733e-06 -0.9999999999927152 -1.5707953071795862
-  field SFBool      supervised    TRUE
+  field SFString   name    "rack"
 ]
 {
     Solid {
+        name IS name
         translation IS translation
         rotation IS rotation
         children [
@@ -110,5 +111,5 @@ PROTO RackCustom [
             }
             ]
         }
-        }
+    }
 }
