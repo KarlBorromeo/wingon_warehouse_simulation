@@ -61,16 +61,17 @@ while robot.step(timestep) != -1:
         else:
             print(f"{current_pallet_field} already exists")
             # then check transported field in the pallet and if it's true, then increment pallet number and update current pallet field in admin
-            transported_field = pallet.getField("transported")
-            if transported_field.getSFBool():
-                print(f"{current_pallet_field} has been transported. Moving to next pallet.")
-                pallet_number += 1
-                current_pallet_field = f"PALLET_{pallet_number}"
-                admin.getField("current_pallet").setSFString(current_pallet_field)
-                pallet = None
-                full = False  
+    else:
+        transported_field = pallet.getField("transported")
+        if transported_field.getSFBool():
+            print(f"{current_pallet_field} has been transported. Moving to next pallet.")
+            pallet_number += 1
+            current_pallet_field = f"PALLET_{pallet_number}"
+            admin.getField("current_pallet").setSFString(current_pallet_field)
+            pallet = None
+            full = False  
 
-                continue 
+            continue 
 
     if not spawned and not full:
         box_proto = get_box_proto(x, y, z)

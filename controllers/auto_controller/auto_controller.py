@@ -18,6 +18,10 @@ class LiftAction:
     height: float
     speed: float = 0.2
 
+@dataclass(frozen=True)
+class SetPalletTransportedAction:
+    admin: Supervisor = None
+
 # Constants
 speed = -2.0
 max_steer_angle = 1.0 
@@ -31,6 +35,7 @@ PLANS = {
     "forklift_1": [
         LinearMoveAction(distance=2.0, speed=speed),
         LinearMoveAction(distance=2.0, speed=-speed),
+        # SetPalletTransportedAction(),
         # TurnAction(degrees=90.0, turn_radius=1.0),
         # LiftAction(height=1.0, speed=0.2),
     ],
@@ -57,6 +62,15 @@ def get_yaw_from_rotation(rotation):
     """
     _, _, az, angle = rotation
     return normalize_angle(az * angle)
+
+def set_pallet_transported(robot: Supervisor, pallet_field_name: str):
+    pallet = robot.getFromDef(pallet_field_name)
+    if pallet:
+        transported_field = pallet.getField("transported")
+        transported_field.setSFBool(True)
+        print(f"Set {pallet_field_name} as transported.")
+    else:
+        print(f"Error: {pallet_field_name} not found to set as transported.")
 
 
 def ackermann_rear_wheel_angles(wheelbase, track_width, turn_radius):
@@ -174,6 +188,8 @@ def stop(front_left_motor: Motor, front_right_motor: Motor, rear_left_steer_moto
 robot = Supervisor()
 timestep = int(robot.getBasicTimeStep())
 
+admin = robot.getFromDef("ADMIN")
+
 #make sure that the robot is a supervisor
 print(f"Checking if robot: {robot.getName()} has supervisor capabilities...")
 if not robot.supervisor:
@@ -233,5 +249,9 @@ while robot.step(timestep) != -1:
         print(f"Executing LiftAction: height={action.height}, speed={action.speed}")
         lift(slider_motor, slider_position_sensor, action.height, action.speed)
         stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
+    elif isinstance(action, SetPalletTransportedAction):
+        print(f"Executing SetPalletTransportedAction")
+        current_pallet_field = admin.getField("current_pallet").getSFString()
+        set_pallet_transported(robot, current_pallet_field)
 
     actions.pop(0)
