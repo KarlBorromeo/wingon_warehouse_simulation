@@ -39,6 +39,10 @@ PROTO ForkLiftCustom [
             RotationalMotor {
             name "rear_left_steer_motor"
             }
+            PositionSensor {
+                name "left_steer_ps"
+            }
+            
         ]
         endPoint Solid {
             translation 0.8559925946849121 -0.4059946899510205 -0.11199679702618275
@@ -103,6 +107,9 @@ PROTO ForkLiftCustom [
         device [
             RotationalMotor {
             name "rear_right_steer_motor"
+            }
+            PositionSensor {
+                name "right_steer_ps"
             }
         ]
         endPoint Solid {
@@ -217,7 +224,7 @@ PROTO ForkLiftCustom [
         }
         device [
             RotationalMotor {
-            name "front_right_motor"
+                name "front_right_motor"
             }
         ]
         endPoint Solid {
@@ -268,7 +275,7 @@ PROTO ForkLiftCustom [
                 minPosition 0.001
                 maxPosition 2
                 maxForce 50
-                multiplier 3
+                multiplier 1
             }
             PositionSensor {
                 name "slider_position_sensor"

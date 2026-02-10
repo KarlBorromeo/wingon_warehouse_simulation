@@ -13,8 +13,8 @@ EXTERNPROTO "../protos/Admin.proto"
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.34939475120047075 -0.1802121151561514 0.9194818657181375 3.9625844469644607
-  position 28.631229904181662 25.52554749036417 35.1683498771551
+  orientation -0.4204720970682198 -0.2966690358131477 0.8574326205462158 4.176034189817985
+  position 22.8733293991926 50.818468980923654 57.787201615088904
 }
 TexturedBackground {
 }
@@ -70,17 +70,26 @@ Solid {
   ]
   name "floor"
   boundingObject Shape {
-    appearance Appearance {
-      material Material {
-      }
-      texture ImageTexture {
+    appearance PBRAppearance {
+      baseColorMap ImageTexture {
         url [
-          "../textures/Texturelabs_Concrete_192XL.jpg"
+          "../textures/rectangle-polished-tile_albedo.png"
+        ]
+      }
+      roughnessMap ImageTexture {
+        url [
+          "../textures/rectangle-polished-tile_roughness.png"
+        ]
+      }
+      metalness 0
+      normalMap ImageTexture {
+        url [
+          "../textures/rectangle-polished-tile_normal-ogl.png"
         ]
       }
     }
     geometry Box {
-      size 50 16.198 1.3
+      size 50 40 1.3
     }
   }
 }
@@ -1032,26 +1041,20 @@ TruckSimple {
   ]
 }
 DEF forklift_1 ForkLiftCustom {
-  hidden rotation_2 -0.9317798550071522 0.07125409292678409 0.35596229581801453 1.2774528318718372e-05
-  hidden rotation_3 -7.728711057188159e-05 0.9999999956205856 5.2778131509015275e-05 6.147705925411944
-  translation 3.283200318139704 -3.7448367930438544 2.5326518323120144
-  rotation 0.010192133478732265 -0.00016598402121278634 0.9999480450825715 -3.1415430114167835
+  translation 13.8454 17.2165 2.53276
+  rotation 0.010357301071336233 0.01002540103700523 0.9998961034270335 1.57095
   controller "auto_controller"
   body_color 0.960784 0.760784 0.0666667
 }
 DEF forklift_2 ForkLiftCustom {
-  hidden rotation_2 -0.9317798278723755 0.07125409085176193 0.3559623672623486 1.2774493555022755e-05
-  hidden rotation_3 -7.728711057188159e-05 0.9999999956205856 5.2778131509015275e-05 6.147705925411944
-  translation 3.0685267736268367 1.3075544247250666 2.532827518207259
-  rotation 0.010108435157791746 1.6505754989280348e-05 0.9999489083279309 -3.140674859459619
+  translation 10.593 17.0348 2.38007
+  rotation 0.010086799171418505 0.010119799168707717 0.9998979178632491 1.57182
   robot_name "forklift_2"
   controller "auto_controller"
 }
 DEF forklift_3 ForkLiftCustom {
-  hidden rotation_2 -0.9317798262167108 0.07125409072515175 0.35596237162161926 1.2774493555022755e-05
-  hidden rotation_3 -7.728711057188159e-05 0.9999999956205856 5.2778131509015275e-05 6.147705925411944
-  translation 2.961539674852899 5.840235735617844 2.5328275182029145
-  rotation 0.010108435402189858 1.6303457209346463e-05 0.999948908328779 -3.14071487820011
+  translation 7.2108 17.0341 2.44638
+  rotation 0.010087199130685821 0.010119799127876356 0.9998979138288614 1.57178
   robot_name "forklift_3"
   controller "auto_controller"
   body_color 0.109804 0.443137 0.847059

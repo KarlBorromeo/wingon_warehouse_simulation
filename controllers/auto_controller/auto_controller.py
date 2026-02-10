@@ -23,7 +23,7 @@ class SetPalletTransportedAction:
     admin: Supervisor = None
 
 # Constants
-speed = -2.0
+speed = -4.0
 max_steer_angle = 1.0 
 min_forklift_height = 0.001
 max_forklift_height = 2.0
@@ -34,10 +34,21 @@ track_width = 0.63
 PLANS = {
     "forklift_1": [
         LinearMoveAction(distance=2.0, speed=speed),
-        LinearMoveAction(distance=2.0, speed=-speed),
-        # SetPalletTransportedAction(),
-        # TurnAction(degrees=90.0, turn_radius=1.0),
-        # LiftAction(height=1.0, speed=0.2),
+        TurnAction(degrees=-90.0, turn_radius=1.5),
+        LinearMoveAction(distance=6.0, speed=speed),
+        TurnAction(degrees=90.0, turn_radius=1.0),
+        LinearMoveAction(distance=13.5, speed=speed),
+        TurnAction(degrees=-85.0, turn_radius=0.5),
+        LinearMoveAction(distance=1.5, speed=speed),
+        LiftAction(height=2.0, speed=0.2),
+        LinearMoveAction(distance=3.0, speed=-speed),
+        TurnAction(degrees=180.0, turn_radius=1.0),
+        LinearMoveAction(distance=6.0, speed=speed),
+        TurnAction(degrees=88.0, turn_radius=1.0),
+        LinearMoveAction(distance=4.2, speed=speed),
+        LiftAction(height=1.85, speed=0.2),
+        LinearMoveAction(distance=3.0, speed=-speed),
+        # TurnAction(degrees=90.0, turn_radius=0.5),
     ],
 
     # "forklift_2": [
@@ -134,7 +145,7 @@ def lift(slider_motor: Motor, pos_sensor: PositionSensor, target_height: float, 
     if target_height < min_forklift_height or target_height > max_forklift_height:
         print(f"Error: Target height {target_height} is out of bounds.")
         return
-    
+
     slider_motor.setVelocity(speed)
     slider_motor.setPosition(target_height)
 
@@ -142,7 +153,7 @@ def lift(slider_motor: Motor, pos_sensor: PositionSensor, target_height: float, 
         current_height = pos_sensor.getValue()
         height_error = target_height - current_height
         
-        # print(f"Current height: {current_height:.3f}, Target height: {target_height:.3f}, Error: {height_error:.3f}")
+        print(f"Current height: {current_height:.3f}, Target height: {target_height:.3f}, Error: {height_error:.3f}")
 
         if abs(height_error) < 0.01:
             break
@@ -157,6 +168,9 @@ def linear_move(front_left_motor: Motor,
 
     start_pos = translation_field.getSFVec3f()
 
+    rear_left_steer_motor.setPosition(0.0)
+    rear_right_steer_motor.setPosition(0.0)
+
     front_left_motor.setVelocity(speed)
     front_right_motor.setVelocity(speed)
 
@@ -164,9 +178,9 @@ def linear_move(front_left_motor: Motor,
         current_pos = translation_field.getSFVec3f()
 
         dx = current_pos[0] - start_pos[0]
-        dz = current_pos[2] - start_pos[2]
+        dy = current_pos[1] - start_pos[1]
 
-        traveled = math.hypot(dx, dz)
+        traveled = math.hypot(dx, dy)
         distance_error = target_distance - traveled
 
         # print(f"Traveled: {traveled:.3f}, Error: {distance_error:.3f}")
@@ -176,6 +190,19 @@ def linear_move(front_left_motor: Motor,
 
     front_left_motor.setVelocity(0.0)
     front_right_motor.setVelocity(0.0)
+
+def straighten_wheels(rear_left_steer_motor: Motor, rear_right_steer_motor: Motor, left_steer_ps: PositionSensor, right_steer_ps: PositionSensor, tol: float = 0.01):
+    rear_left_steer_motor.setPosition(0.0)
+    rear_right_steer_motor.setPosition(0.0)
+
+    while robot.step(timestep) != -1:
+        left_steer_angle = left_steer_ps.getValue()
+        right_steer_angle = right_steer_ps.getValue()
+
+        # print(f"Left steer angle: {math.degrees(left_steer_angle):.2f} deg, Right steer angle: {math.degrees(right_steer_angle):.2f} deg")
+
+        if abs(left_steer_angle) < tol and abs(right_steer_angle) < tol:
+            break
 
 def stop(front_left_motor: Motor, front_right_motor: Motor, rear_left_steer_motor: Motor, rear_right_steer_motor: Motor):
     print("Stopping robot and straightening wheels.")
@@ -206,7 +233,7 @@ rear_right_steer_motor: Motor = robot.getDevice("rear_right_steer_motor")
 
 front_left_motor.setPosition(float('inf'))
 front_right_motor.setPosition(float('inf'))
-slider_motor.setPosition(float('inf'))
+# slider_motor.setPosition(float('inf'))
 rear_left_steer_motor.setPosition(float('inf'))
 rear_right_steer_motor.setPosition(float('inf'))
 
@@ -220,13 +247,19 @@ rear_left_steer_motor.setPosition(0.0)
 rear_right_steer_motor.setPosition(0.0)
 
 slider_position_sensor: PositionSensor = robot.getDevice("slider_position_sensor")
+left_steer_ps: PositionSensor = robot.getDevice("left_steer_ps")
+right_steer_ps: PositionSensor = robot.getDevice("right_steer_ps")
+
 slider_position_sensor.enable(timestep)
+left_steer_ps.enable(timestep)
+right_steer_ps.enable(timestep)
 
 translation_field = robot.getFromDef(robot.getName()).getField("translation")
 rotation_field = robot.getFromDef(robot.getName()).getField("rotation")
 
 actions = PLANS.get(robot.getName(), [])
 print(f"Loaded {len(actions)} actions for {robot.getName()}.")
+print(actions)
 
 # exit(0)  # TEMP: Remove this line to run the full plan
 
@@ -236,22 +269,25 @@ while robot.step(timestep) != -1:
         break
 
     action = actions[0]
+    print(f"Executing action: {action}")
 
     if isinstance(action, LinearMoveAction):
-        print(f"Executing LinearMoveAction: distance={action.distance}, speed={action.speed}, tol={action.tol}")
+        # print(f"Executing LinearMoveAction: distance={action.distance}, speed={action.speed}, tol={action.tol}")
+        straighten_wheels(rear_left_steer_motor, rear_right_steer_motor, left_steer_ps, right_steer_ps, tol=0.01)
         linear_move(front_left_motor, front_right_motor, translation_field, action.distance, action.speed, action.tol)
-        stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
+        # stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
     elif isinstance(action, TurnAction):
-        print(f"Executing TurnAction: degrees={action.degrees}, turn_radius={action.turn_radius}")
+        # print(f"Executing TurnAction: degrees={action.degrees}, turn_radius={action.turn_radius}")
         turn_n_degrees_rear_steer(robot, rotation_field, action.degrees, action.turn_radius)
-        stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
+        # stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
     elif isinstance(action, LiftAction):
-        print(f"Executing LiftAction: height={action.height}, speed={action.speed}")
+        # print(f"Executing LiftAction: height={action.height}, speed={action.speed}")
         lift(slider_motor, slider_position_sensor, action.height, action.speed)
-        stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
+        # stop(front_left_motor, front_right_motor, rear_left_steer_motor, rear_right_steer_motor)
     elif isinstance(action, SetPalletTransportedAction):
-        print(f"Executing SetPalletTransportedAction")
+        # print(f"Executing SetPalletTransportedAction")
         current_pallet_field = admin.getField("current_pallet").getSFString()
         set_pallet_transported(robot, current_pallet_field)
 
     actions.pop(0)
+    print(f"Actions Left: {actions}")
