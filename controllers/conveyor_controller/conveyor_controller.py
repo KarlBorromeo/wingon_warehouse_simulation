@@ -28,6 +28,14 @@ belt_motor.setPosition(float('inf'))
 box_spawner = robot.getFromDef("box_spawner")
 box_spawner_tf = box_spawner.getField("translation")
 
+admin = robot.getFromDef("ADMIN")
+pallet_number = 1
+current_pallet_field = f"PALLET_{pallet_number}"
+admin.getField("current_pallet").setSFString(current_pallet_field)
+
+# exit()
+
+
 box = None
 spawned = False
 pallet = None
@@ -37,7 +45,21 @@ while robot.step(timestep) != -1:
     belt_motor.setVelocity(0.3)
 
     if not pallet:
-        pallet = robot.getFromDef("PALLET")
+        pallet = robot.getFromDef(current_pallet_field)
+        if not pallet:
+            # Spawn the pallet if it doesn't exist
+            pallet_proto = f"""
+                DEF {current_pallet_field} WoodenPalletCustom {{
+                translation 0.64 -4.22999 2.25998
+                rotation -0.9346383711608598 -0.30175911983370024 0.1881290747092686 -5.307179586466759e-06
+                }}
+            """
+            robot.getRoot().getField("children").importMFNodeFromString(-1, pallet_proto)
+            pallet = robot.getFromDef(current_pallet_field)
+            print(f"Spawned {current_pallet_field}")
+        else:
+            print(f"{current_pallet_field} already exists")
+
 
     if not spawned:
         box_proto = get_box_proto(x, y, z)
@@ -52,7 +74,7 @@ while robot.step(timestep) != -1:
 
     pos = box.getPosition()
     distance_travelled = math.hypot(pos[0] - x, pos[2] - z)
-    print(f"Distance travelled by box: {distance_travelled:.3f}")
+    # print(f"Distance travelled by box: {distance_travelled:.3f}")
 
     if distance_travelled >= 2.7:
         print("Box has reached the end of the conveyor.")
@@ -64,9 +86,8 @@ while robot.step(timestep) != -1:
             pallet_box_slot1.importMFNodeFromString(0, get_box_proto(0.0, 0.0, 0.0, add_def=False))
         elif pallet_box_slot2.getCount() == 0:
             pallet_box_slot2.importMFNodeFromString(0, get_box_proto(0.0, 0.0, 0.0, add_def=False))
-        else:
-            box.remove()
-
+        
+        box.remove()
         box = None
         spawned = False
 

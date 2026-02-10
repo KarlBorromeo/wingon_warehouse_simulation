@@ -4,6 +4,7 @@ PROTO WoodenPalletCustom [
   field SFRotation rotation      -3.3977899999752476e-06 1.73923999998733e-06 -0.9999999999927152 -1.5707953071795862
   field MFNode boxSlot1 []
   field MFNode boxSlot2 []
+  field SFBool transported FALSE
 ]
 {
     Solid {

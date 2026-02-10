@@ -1,0 +1,15 @@
+#VRML_SIM R2023b utf8
+
+PROTO Admin [
+    field SFVec3f    translation  0 0 0
+    field SFRotation rotation     0 1 0 0
+    field SFString   name         "Admin"
+    field SFString   current_pallet "pallet"
+]
+{
+    DEF ADMIN Solid {
+        translation IS translation
+        rotation    IS rotation
+        name        IS name
+    }
+}
