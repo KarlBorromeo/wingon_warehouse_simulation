@@ -22,6 +22,10 @@ class LiftAction:
 class SetPalletTransportedAction:
     admin: Supervisor = None
 
+@dataclass(frozen=True)
+class WaitAction:
+    duration: float
+
 # Constants
 speed = -4.0
 max_steer_angle = 1.0 
@@ -41,24 +45,83 @@ PLANS = {
         TurnAction(degrees=-85.0, turn_radius=0.5),
         LinearMoveAction(distance=1.5, speed=speed),
         LiftAction(height=2.0, speed=0.2),
+        SetPalletTransportedAction(),
         LinearMoveAction(distance=3.0, speed=-speed),
         TurnAction(degrees=180.0, turn_radius=1.0),
         LinearMoveAction(distance=6.0, speed=speed),
         TurnAction(degrees=88.0, turn_radius=1.0),
         LinearMoveAction(distance=4.2, speed=speed),
         LiftAction(height=1.85, speed=0.2),
+        LinearMoveAction(distance=3.1, speed=-speed),
+        LiftAction(height=min_forklift_height, speed=0.2),
+        TurnAction(degrees=85.0, turn_radius=0.5),
+        LinearMoveAction(distance=10.4, speed=speed),
+        LiftAction(height=1.3, speed=0.2),
+        SetPalletTransportedAction(),
         LinearMoveAction(distance=3.0, speed=-speed),
-        # TurnAction(degrees=90.0, turn_radius=0.5),
+        TurnAction(degrees=180.0, turn_radius=1.0),
+        LinearMoveAction(distance=21.15, speed=speed),
+        TurnAction(degrees=90.0, turn_radius=1.0),
+        TurnAction(degrees=177.0, turn_radius=1.0),
+        LinearMoveAction(distance=4.1, speed=speed),
+        LiftAction(height=1.13, speed=0.2),
+        LinearMoveAction(distance=3.1, speed=-speed),
+        LiftAction(height=min_forklift_height, speed=0.2),
     ],
 
-    # "forklift_2": [
-    #     LinearMoveAction(distance=0.5, speed=speed),
-    #     TurnAction(degrees=-90.0, turn_radius=1.0),
-    # ],
-    # "forklift_3": [
-    #     LiftAction(height=max_forklift_height, speed=0.2),
-    #     LinearMoveAction(distance=1.5, speed=speed),
-    # ]
+    "forklift_2": [
+        WaitAction(duration=12.0),
+        LinearMoveAction(distance=2.0, speed=speed),
+        TurnAction(degrees=-90.0, turn_radius=0.5),
+        LinearMoveAction(distance=2.0, speed=speed),
+        TurnAction(degrees=85.0, turn_radius=0.5),
+        LinearMoveAction(distance=13.5, speed=speed),
+        WaitAction(duration=22.0),
+        LinearMoveAction(distance=2.7, speed=speed),
+        TurnAction(degrees=-80.0, turn_radius=0.5),
+        LinearMoveAction(distance=2.8, speed=speed),
+        LiftAction(height=2.0, speed=0.2),
+        SetPalletTransportedAction(),
+        LinearMoveAction(distance=3.0, speed=-speed),
+        TurnAction(degrees=180.0, turn_radius=1.0),
+        LinearMoveAction(distance=27.0, speed=speed),
+        TurnAction(degrees=90.0, turn_radius=1.0),
+        LinearMoveAction(distance=10.0, speed=speed),
+        TurnAction(degrees=176.0, turn_radius=1.0),
+        LinearMoveAction(distance=2.7, speed=speed),
+        LiftAction(height=1.85, speed=0.2),
+        LinearMoveAction(distance=3.0, speed=-speed),
+        LiftAction(height=min_forklift_height, speed=0.2),
+        TurnAction(degrees=-90.0, turn_radius=1.0),
+        LinearMoveAction(distance=21.15, speed=speed),
+        TurnAction(degrees=90.0, turn_radius=1.0),
+        LinearMoveAction(distance=5.15, speed=speed),
+        TurnAction(degrees=-88.0, turn_radius=1.0),
+        LinearMoveAction(distance=1.6, speed=speed),
+        LiftAction(height=0.5, speed=0.2),
+        LinearMoveAction(distance=3.0, speed=-speed),
+        TurnAction(degrees=-180.0, turn_radius=2.0),
+        TurnAction(degrees=90.0, turn_radius=2.0),
+        LinearMoveAction(distance=1.62, speed=speed),
+        LiftAction(height=0.3, speed=0.2),
+        LinearMoveAction(distance=3.1, speed=-speed),
+        
+    ],
+    "forklift_3": [
+        WaitAction(duration=157.0),
+        TurnAction(degrees=90.0, turn_radius=2.0),
+        LinearMoveAction(distance=20.5, speed=speed),
+        TurnAction(degrees=-180.0, turn_radius=2.0),
+        LinearMoveAction(distance=0.6, speed=speed),
+        TurnAction(degrees=90.0, turn_radius=1.0),
+        LiftAction(height=1.85, speed=0.2),
+        LinearMoveAction(distance=3.0, speed=speed),
+        LiftAction(height=2.0, speed=0.2),
+        LinearMoveAction(distance=3.8, speed=-speed),
+        LiftAction(height=0.3, speed=0.2),
+        TurnAction(degrees=-90.0, turn_radius=1.0),
+        LinearMoveAction(distance=28.0, speed=speed+(-20)),
+    ]
 }
 
 def normalize_angle(angle):
@@ -211,6 +274,10 @@ def stop(front_left_motor: Motor, front_right_motor: Motor, rear_left_steer_moto
     rear_left_steer_motor.setPosition(0.0)
     rear_right_steer_motor.setPosition(0.0)
 
+def wait(duration: float):
+    start_time = robot.getTime()
+    while robot.getTime() - start_time < duration:
+        robot.step(timestep)
 
 robot = Supervisor()
 timestep = int(robot.getBasicTimeStep())
@@ -288,6 +355,9 @@ while robot.step(timestep) != -1:
         # print(f"Executing SetPalletTransportedAction")
         current_pallet_field = admin.getField("current_pallet").getSFString()
         set_pallet_transported(robot, current_pallet_field)
+    elif isinstance(action, WaitAction):
+        # print(f"Executing WaitAction: duration={action.duration}")
+        wait(action.duration)
 
     actions.pop(0)
     print(f"Actions Left: {actions}")
