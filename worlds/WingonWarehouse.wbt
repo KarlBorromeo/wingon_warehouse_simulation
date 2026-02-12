@@ -16,8 +16,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.2829465890341388 -0.12339440800838726 0.9511651001935498 3.8481935942816357
-  position 45.219136883812 36.62860359971857 33.803934565467905
+  orientation 0.38773474569189925 0.455917646169819 -0.8011247511431725 1.6881212141140094
+  position 15.022996609176456 24.335196597643417 33.80236143814841
 }
 TexturedBackground {
 }
@@ -1056,24 +1056,24 @@ TruckSimple {
   ]
 }
 DEF forklift_1 ForkLiftCustom {
-  hidden rotation_2 -0.931779843805347 0.07125409207017146 0.35596232531173705 1.2774528318718372e-05
-  hidden rotation_3 -7.725438911699241e-05 0.9999999956242931 5.2755786550891224e-05 6.147705925411944
+  hidden rotation_2 -0.9317798435416752 0.07125409205000828 0.35596232600596944 1.2774528318718372e-05
+  hidden rotation_3 -7.725374738129665e-05 0.9999999956243659 5.2755348319849945e-05 6.147705925411944
   translation 13.8454 17.2165 2.53276
   rotation 0.010357301071336233 0.01002540103700523 0.9998961034270335 1.57095
   controller "auto_controller"
   body_color 0.960784 0.760784 0.0666667
 }
 DEF forklift_2 ForkLiftCustom {
-  hidden rotation_2 -0.931779843805347 0.07125409207017146 0.35596232531173705 1.2774528318718372e-05
-  hidden rotation_3 -7.725438911699241e-05 0.9999999956242931 5.2755786550891224e-05 6.147705925411944
+  hidden rotation_2 -0.9317798435416752 0.07125409205000828 0.35596232600596944 1.2774528318718372e-05
+  hidden rotation_3 -7.725374738129665e-05 0.9999999956243659 5.2755348319849945e-05 6.147705925411944
   translation 10.593 17.0348 2.38007
   rotation 0.010086799171418505 0.010119799168707717 0.9998979178632491 1.57182
   robot_name "forklift_2"
   controller "auto_controller"
 }
 DEF forklift_3 ForkLiftCustom {
-  hidden rotation_2 -0.931779843805347 0.07125409207017146 0.35596232531173705 1.2774528318718372e-05
-  hidden rotation_3 -7.725438911699241e-05 0.9999999956242931 5.2755786550891224e-05 6.147705925411944
+  hidden rotation_2 -0.9317798435416752 0.07125409205000828 0.35596232600596944 1.2774528318718372e-05
+  hidden rotation_3 -7.725374738129665e-05 0.9999999956243659 5.2755348319849945e-05 6.147705925411944
   translation 7.2108 17.0341 2.44638
   rotation 0.010087199130685821 0.010119799127876356 0.9998979138288614 1.57178
   robot_name "forklift_3"
@@ -1191,5 +1191,1512 @@ DEF box_spawner Solid {
   name "box_spawner"
 }
 DEF ADMIN Admin {
-  current_pallet "PALLET_3"
+  current_pallet "PALLET_1"
+}
+WoodenPalletCustom {
+  translation 9.14 9.58001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 10.9 0.56001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 10.9 0.56001 3.28998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 12.87 0.56001 3.28998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 12.79 0.560009 4.09998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 14.6 0.560009 4.09998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 14.6 0.560009 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 14.6 0.560009 2.48998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.47 0.560009 2.48998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.47 0.560009 3.28998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 18.15 0.560009 3.28998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 18.23 0.560009 2.53998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.2 0.560009 2.53998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 22 0.560009 2.53998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 27.79 0.62001 3.33998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 29.45 -0.919992 4.14998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 27.76 -10.32 3.22995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 25.8 -10.32 3.22995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 21.99 -10.32 4.12995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 21.99 -10.32 3.27995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 21.99 -10.32 3.27995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.36 -10.32 3.27995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.36 -10.32 2.48995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 18.21 -10.32 2.48995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.4 -10.32 2.48995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 14.46 -10.32 2.48995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 10.79 -10.32 3.30995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 9.09 -10.32 4.05995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 9.09 -10.32 2.53995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.4 -10.32 4.10995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 27.73 -10.32 2.43995
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 27.8 -0.919992 4.14998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 27.8 -0.919992 3.30998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 29.51 -0.919992 3.30998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 29.56 -0.919992 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 27.77 -0.919992 2.50998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 25.84 -0.919992 2.50998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 24.02 -0.919992 2.50998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 24.02 -0.919996 4.14998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 21.83 -0.919996 4.14998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.17 -0.919996 4.14998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.17 -0.91999 2.48998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.17 -0.91999 3.32998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 18.18 -0.91999 3.32998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.38 -0.91999 3.32998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.38 -0.91999 4.10998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 14.51 -0.91999 2.45998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 12.76 -0.91999 2.45998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 10.85 -0.91999 2.45998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 10.85 -0.91999 3.27998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 9.13 -0.91999 3.27998
+  rotation -3.407379999975009e-06 1.7488299999871735e-06 -0.9999999999926656 -1.5707953071795862
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 29.45 0.620008 2.51998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 9.14 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 10.93 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.79 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 18.41 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 22.17 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 24.04 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 25.82 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 29.51 9.58001 3.29998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 29.51 9.58001 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 24.05 9.58001 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 22.16 9.58001 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.37 9.58001 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.67 9.58001 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 14.72 9.58001 2.50998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 12.81 9.58001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 16.73 9.58001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 18.44 9.58001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 20.47 9.58001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+}
+WoodenPalletCustom {
+  translation 25.78 9.58001 4.12998
+  boxSlot1 [
+    CardboardBox {
+      translation 0 0 -0.02
+      size 0.31 0.37 0.24
+    }
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
+  boxSlot2 [
+    CardboardBox {
+      translation 0 0 -0.02
+      name "cardboard box(1)"
+      size 0.31 0.37 0.24
+    }
+  ]
 }

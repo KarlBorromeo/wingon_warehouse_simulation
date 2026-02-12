@@ -53,6 +53,7 @@ while robot.step(timestep) != -1:
                 DEF {current_pallet_field} WoodenPalletCustom {{
                 translation 0.64 -4.22999 2.25998
                 rotation -0.9346383711608598 -0.30175911983370024 0.1881290747092686 -5.307179586466759e-06
+                enablePhysics TRUE
                 }}
             """
             robot.getRoot().getField("children").importMFNodeFromString(-1, pallet_proto)
