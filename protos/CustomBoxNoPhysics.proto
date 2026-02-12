@@ -1,0 +1,94 @@
+#VRML_SIM R2023b utf8
+
+PROTO CustomBoxNoPhysics [
+    field SFVec3f    translation  0 0 0
+    field SFVec3f    size 0.31 0.37 0.24
+    field SFString   name  "custom_box"
+]
+{
+    Solid {
+      translation IS translation
+      children [
+        DEF BACK Pose {
+          translation -0.15475 0 0
+          children [
+            Shape {
+              appearance Cardboard {
+              }
+              geometry Box {
+                size 0.0005 0.3699 0.2399
+              }
+            }
+          ]
+        }
+        DEF FRONT Pose {
+          translation 0.15475 0 0
+          children [
+            Shape {
+              appearance Cardboard {
+                type "front"
+              }
+              geometry Box {
+                size 0.0005 0.3699 0.2399
+              }
+            }
+          ]
+        }
+        DEF RIGHT Pose {
+          translation 0 -0.18475 0
+          children [
+            Shape {
+              appearance Cardboard {
+                type "right"
+              }
+              geometry Box {
+                size 0.3099 0.0005 0.2399
+              }
+            }
+          ]
+        }
+        DEF LEFT Pose {
+          translation 0 0.18475 0
+          children [
+            Shape {
+              appearance Cardboard {
+                type "left"
+              }
+              geometry Box {
+                size 0.3099 0.0005 0.2399
+              }
+            }
+          ]
+        }
+        DEF BOTTOM Pose {
+          translation 0 0 -0.11975
+          children [
+            Shape {
+              appearance Cardboard {
+                type "bottom"
+              }
+              geometry Box {
+                size 0.3099 0.3699 0.0005
+              }
+            }
+          ]
+        }
+        DEF TOP Pose {
+          translation 0 0 0.11975
+          rotation 0 1 0 0
+          children [
+            Shape {
+              appearance Cardboard {
+                type "top"
+              }
+              geometry Box {
+                size 0.3099 0.3699 0.0005
+              }
+            }
+          ]
+        }
+      ]
+      name IS name
+      model "cardboard box"
+    }
+}
